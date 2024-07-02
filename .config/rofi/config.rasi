@@ -1,0 +1,13 @@
+@theme "solarized_alternate"
+// @theme "Arc-Dark"
+// @theme "blue"
+// @theme "Adapta-Nokto"
+
+* {
+    background: rgba ( 0, 43, 55, 90 % );
+    foreground: rgba ( 200, 216, 219, 100 % );
+}
+
+window {
+    border-radius: 5px;
+}

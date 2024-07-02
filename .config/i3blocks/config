@@ -1,0 +1,28 @@
+# https://github.com/vivien/i3blocks-contrib/tree/master/volume-pulseaudio
+[volume-pulseaudio]
+command=~/.config/i3blocks/volume-pulseaudio
+interval=once
+signal=11
+LONG_FORMAT="  ${SYMB} ${VOL}% "
+AUDIO_HIGH_SYMBOL=
+AUDIO_MED_THRESH=50
+AUDIO_MED_SYMBOL=
+AUDIO_LOW_THRESH=0
+AUDIO_LOW_SYMBOL=
+AUDIO_MUTED_SYMBOL=
+
+# https://github.com/vivien/i3blocks-contrib/tree/master/battery2
+[battery]
+command=~/.config/i3blocks/battery
+markup=pango
+label= 
+interval=30
+
+[calendar]
+full_text=" <span font='FontAwesome'>\uf073</span> "
+markup=pango
+command=gsimplecal
+
+[time]
+command=echo '' $(date '+%Y-%m-%d %H:%M') ''
+interval=1
