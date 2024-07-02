@@ -43,6 +43,7 @@ alias backg='nitrogen --restore'
 alias aliasg='alias | grep'
 alias aliasgit='alias | grep git'
 alias aliasnpm='alias | grep npm'
+alias onlykey="/opt/OnlyKey/nw"
 
 eval "$(fzf --zsh)"
 
