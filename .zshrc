@@ -25,7 +25,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="frontcube" # best: frontcube, intheloop, refined | good: murilasso, strug | other: peepcode, sporty_256
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
+plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
 source $ZSH/oh-my-zsh.sh
 
 autoload -Uz compinit
