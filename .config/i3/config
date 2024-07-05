@@ -15,11 +15,11 @@ for_window [class=".*"] title_format " <span size='smaller'>%title</span>"
 # Autostart some apps
 exec_always --no-startup-id picom
 exec_always --no-startup-id nm-applet
-exec_always --no-startup-id nitrogen --restore
 
-exec --no-startup-id "sleep 15; i3-msg 'workspace 1; exec firefox;'"
-exec --no-startup-id "sleep 15; i3-msg 'workspace 2; exec code;'"
-exec --no-startup-id "sleep 15; i3-msg 'workspace 2; exec xfce4-terminal;'"
+exec --no-startup-id "sleep 12; i3-msg 'workspace 1; exec firefox;'"
+exec --no-startup-id "sleep 12; i3-msg 'workspace 2; exec code;'"
+exec --no-startup-id "sleep 12; i3-msg 'workspace 2; exec xfce4-terminal;'"
+exec --no-startup-id "sleep 12; nitrogen --restore;"
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
