@@ -18,15 +18,15 @@ markup=pango
 label= 
 interval=30
 
-[calendar]
-full_text=" <span font='FontAwesome'>\uf073</span> "
-markup=pango
-command=gsimplecal
-
 [logout]
 full_text=" <span font='FontAwesome'>\uf011</span> "
 markup=pango
 command=xfce4-session-logout
+
+[calendar]
+full_text=" <span font='FontAwesome'>\uf073</span> "
+markup=pango
+command=gsimplecal
 
 [time]
 command=echo '' $(date '+%Y-%m-%d %H:%M') ''
