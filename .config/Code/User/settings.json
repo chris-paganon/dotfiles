@@ -1,0 +1,17 @@
+{
+  "editor.fontFamily": "'SourceCodeVF', 'Droid Sans Mono', 'monospace', monospace, 'Noto Color Emoji'",
+  "terminal.external.linuxExec": "xfce4-terminal",
+  "editor.fontWeight": "600",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "github.copilot.enable": {
+    "markdown": "true"
+  },
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "editor.tabSize": 2
+}
