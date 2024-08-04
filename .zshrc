@@ -38,6 +38,8 @@ bindkey '^n' history-search-forward
 alias c='clear'
 alias ll='ls -l'
 alias la='ls -a'
+alias "clean"="yay -Sc"
+alias "deepclean"="yay -Qtdq | yay -Rns -"
 alias gcaam='git add -A && git commit -m'
 alias backg='nitrogen --restore'
 alias ai='ollama run llama3.1'
