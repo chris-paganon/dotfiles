@@ -54,6 +54,8 @@ bar {
 #                 #
 
 set $mod Mod4
+set $move_to_next ~/.config/i3/move-to-next.sh
+set $start_on_next ~/.config/i3/start-on-next.sh
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
@@ -91,12 +93,15 @@ for_window [class="Xfce4-terminal"] move left 300
 for_window [class="Xfce4-terminal"] move up 50
 
 bindsym Mod1+f exec --no-startup-id firefox
+bindsym Mod1+Control+f exec --no-startup-id $start_on_next firefox
 bindsym $mod+f [class="firefox"] focus
 
 bindsym Mod1+e exec --no-startup-id thunar
+bindsym Mod1+Control+e exec --no-startup-id $start_on_next thunar
 
-bindsym $mod+s [class="Spotify"] focus
 bindsym Mod1+s exec --no-startup-id spotify-launcher
+bindsym Mod1+Control+s exec --no-startup-id $start_on_next spotify-launcher
+bindsym $mod+s [class="Spotify"] focus
 
 bindsym Mod1+q exec --no-startup-id qalculate-gtk
 for_window [class="Qalculate-gtk"] floating enable
@@ -192,17 +197,16 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym --whole-window $mod+Shift+button8 move left;
-bindsym --whole-window $mod+Shift+button9 move right;
-
 # To workspace left & right
 bindsym --whole-window $mod+button8 move container to output left; focus output left
+bindsym --whole-window $mod+Shift+button8 move container to output left; focus output left; exec --no-startup-id $move_to_next
 bindsym --whole-window $mod+button9 move container to output right; focus output right
+bindsym --whole-window $mod+Shift+button9 move container to output right; focus output right; exec --no-startup-id $move_to_next
 
 # To workspace on same screen
 # move window to next available workspace on same screen
-bindsym --whole-window $mod+button4 exec --no-startup-id ~/.config/i3/next-available-workspace.sh
-bindsym $mod+Control+Up exec --no-startup-id ~/.config/i3/next-available-workspace.sh
+bindsym --whole-window $mod+button4 exec --no-startup-id $move_to_next
+bindsym $mod+Control+Up exec --no-startup-id $move_to_next
 # switch to next available workspace on same screen
 bindsym --whole-window $mod+Shift+button4 move container to workspace next_on_output; workspace next_on_output;
 bindsym $mod+Control+Down move container to workspace next_on_output; workspace next_on_output;
