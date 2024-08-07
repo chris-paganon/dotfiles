@@ -46,6 +46,7 @@ bar {
         workspace_min_width 50
         font pango:SourceCodeVF 12
         status_command i3blocks
+        tray_output primary
 }
 
 
