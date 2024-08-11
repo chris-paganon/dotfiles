@@ -84,6 +84,7 @@ bindsym $mod+q kill
 bindsym Mod1+space exec --no-startup-id rofi -font "SourceCodeVF 12" -show run
 
 bindsym Mod1+c exec --no-startup-id code
+bindsym Mod1+Control+c exec --no-startup-id $start_on_next code
 bindsym $mod+c [class="Code"] focus
 
 bindsym Mod1+t exec --no-startup-id xfce4-terminal
