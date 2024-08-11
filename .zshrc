@@ -43,6 +43,7 @@ alias "deepclean"="yay -Qtdq | yay -Rns -"
 alias "installed"="pacman -Qqe"
 alias "copy"="xsel -b -i"
 alias "paste"="xsel -b -o"
+alias "dockerstop"="docker stop \$(docker ps -q)"
 alias gcaam='git add -A && git commit -m'
 alias backg='nitrogen --restore'
 alias ai='ollama run llama3.1'
