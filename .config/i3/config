@@ -21,9 +21,6 @@ exec --no-startup-id "sleep 12; i3-msg 'workspace 1; exec firefox;'"
 exec --no-startup-id "sleep 12; i3-msg 'workspace 2; exec xfce4-terminal;'"
 # exec --no-startup-id "sleep 12; i3-msg 'workspace 2; exec code;'"
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 #                 #
 # ---- Style ---- #
@@ -65,6 +62,9 @@ tiling_drag modifier titlebar
 
 # Don't steal the focus
 focus_on_window_activation urgent
+
+# Lock screen
+bindsym $mod+Mod1+l exec --no-startup-id xflock4
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 10 && pkill -RTMIN+11 i3blocks
