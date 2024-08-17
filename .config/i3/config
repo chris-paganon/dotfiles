@@ -63,8 +63,11 @@ tiling_drag modifier titlebar
 # Don't steal the focus
 focus_on_window_activation urgent
 
-# Lock screen
+# xfce4 keybindings
+bindsym $mod+Mod1+s exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Mod1+l exec --no-startup-id xflock4
+bindsym $mod+Mod1+c exec --no-startup-id xfce4-session-logout
+bindsym $mod+Mod1+d exec --no-startup-id xfce4-display-settings
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 10 && pkill -RTMIN+11 i3blocks
