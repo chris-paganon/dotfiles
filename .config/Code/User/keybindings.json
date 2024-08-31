@@ -37,5 +37,18 @@
   {
     "key": "ctrl+alt+l",
     "command": "-continue.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.files.action.collapseExplorerFolders"
   }
 ]
