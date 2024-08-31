@@ -47,6 +47,7 @@ alias "dockerstop"="docker stop \$(docker ps -q)"
 alias gcaam='git add -A && git commit -m'
 alias backg='nitrogen --restore'
 alias ai='ollama run llama3.1'
+alias ai-code="ollama run deepseek-coder-v2:latest"
 alias aliasg='alias | grep'
 alias aliasgit='alias | grep git'
 alias aliasnpm='alias | grep npm'
