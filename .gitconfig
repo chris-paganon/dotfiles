@@ -1,3 +1,5 @@
 [user]
 	name = chrispaganon
 	email = info@chrispaganon.com
+[safe]
+	directory = /etc/etcfiles
