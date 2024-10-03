@@ -53,6 +53,8 @@ alias aliasgit='alias | grep git'
 alias aliasnpm='alias | grep npm'
 alias onlykey="/opt/OnlyKey/nw"
 
+alias fixlight="asusctl led-pow-2 keyboard --awake"
+
 eval "$(fzf --zsh)"
 
 # Set list of themes to pick from when loading at random
