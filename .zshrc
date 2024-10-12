@@ -64,6 +64,9 @@ alias dockerstop="docker stop \$(docker ps -q)"
 # remember fixes
 alias fixlight="asusctl led-pow-2 keyboard --awake"
 
+# scripts
+alias dev="./scripts/open-git-folder.sh"
+
 eval "$(fzf --zsh)"
 
 # Set list of themes to pick from when loading at random
