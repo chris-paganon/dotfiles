@@ -67,7 +67,7 @@ focus_on_window_activation urgent
 # xfce4 keybindings
 bindsym $mod+Mod1+s exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Mod1+l exec --no-startup-id xflock4
-bindsym $mod+Mod1+e exec --no-startup-id xfce4-session-logout
+bindsym $mod+Mod1+e exec --no-startup-id notify-send --action "shutdown now=Shutdown" "Shutdown now?" | xargs -0 sh -c
 bindsym $mod+Mod1+d exec --no-startup-id xfce4-display-settings
 
 # Use pactl to adjust volume in PulseAudio.
