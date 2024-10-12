@@ -35,24 +35,33 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
+# common aliases
 alias c='clear'
 alias ll='ls -l'
 alias la='ls -a'
-alias "clean"="yay -Sc"
-alias "deepclean"="yay -Qtdq | yay -Rns -"
-alias "installed"="pacman -Qqe"
-alias "copy"="xsel -b -i"
-alias "paste"="xsel -b -o"
-alias "dockerstop"="docker stop \$(docker ps -q)"
+alias copy="xsel -b -i"
+alias paste="xsel -b -o"
 alias gcaam='git add -A && git commit -m'
-alias backg='nitrogen --restore'
-alias ai='ollama run llama3.1'
-alias ai-code="ollama run deepseek-coder-v2:16b"
+
+# pacman aliases
+alias clean="yay -Sc"
+alias deepclean="yay -Qtdq | yay -Rns -"
+alias installed="pacman -Qqe"
+alias yeet="yay -Rns"
+
+# oh my zsh aliases
 alias aliasg='alias | grep'
 alias aliasgit='alias | grep git'
 alias aliasnpm='alias | grep npm'
-alias onlykey="/opt/OnlyKey/nw"
 
+# specific tools aliases
+alias ai='ollama run llama3.1'
+alias ai-code="ollama run deepseek-coder-v2:16b"
+alias backg='nitrogen --restore'
+alias onlykey="/opt/OnlyKey/nw"
+alias dockerstop="docker stop \$(docker ps -q)"
+
+# remember fixes
 alias fixlight="asusctl led-pow-2 keyboard --awake"
 
 eval "$(fzf --zsh)"
