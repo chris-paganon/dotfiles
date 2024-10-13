@@ -37,7 +37,7 @@ bindkey '^n' history-search-forward
 
 # common aliases
 alias c='clear'
-alias ll='ls -l'
+alias ll='ls -al'
 alias la='ls -a'
 alias copy="xsel -b -i"
 alias paste="xsel -b -o"
@@ -48,6 +48,7 @@ alias clean="yay -Sc"
 alias deepclean="yay -Qtdq | yay -Rns -"
 alias installed="pacman -Qqe"
 alias yeet="yay -Rns"
+alias hmmm="yay -Sy &> /dev/null && yay -Qu"
 
 # oh my zsh aliases
 alias aliasg='alias | grep'
