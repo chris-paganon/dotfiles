@@ -92,8 +92,10 @@ bindsym Mod1+Control+c exec --no-startup-id $start_on_next code
 bindsym $mod+c [class="Code"] focus
 
 bindsym Mod1+t exec --no-startup-id xfce4-terminal
-bindsym $mod+t [class="Xfce4-terminal"] focus
-for_window [class="Xfce4-terminal"] move scratchpad; scratchpad show
+bindsym Mod1+a exec --no-startup-id xfce4-terminal
+bindsym $mod+a [con_mark="terminal"] scratchpad show
+for_window [class="Xfce4-terminal"] mark "terminal"
+for_window [class="Xfce4-terminal"] move scratchpad; [con_mark="terminal"] scratchpad show;
 for_window [class="Xfce4-terminal"] resize set 1600 900
 for_window [class="Xfce4-terminal"] move left 300
 for_window [class="Xfce4-terminal"] move up 50
@@ -106,8 +108,12 @@ bindsym Mod1+e exec --no-startup-id thunar
 bindsym Mod1+Control+e exec --no-startup-id $start_on_next thunar
 
 bindsym Mod1+s exec --no-startup-id spotify-launcher
-bindsym Mod1+Control+s exec --no-startup-id $start_on_next spotify-launcher
-bindsym $mod+s [class="Spotify"] focus
+bindsym $mod+s [con_mark="music"] scratchpad show
+for_window [class="Spotify"] mark "music"
+for_window [class="Spotify"] move scratchpad; [con_mark="music"] scratchpad show;
+for_window [class="Spotify"] resize set 1600 900
+for_window [class="Spotify"] move left 300
+for_window [class="Spotify"] move up 50
 
 bindsym Mod1+q exec --no-startup-id qalculate-gtk
 for_window [class="Qalculate-gtk"] floating enable
@@ -191,7 +197,7 @@ bindsym $mod+Control+Right workspace next
 # Move on same screen & scratchpad
 bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab workspace next_on_output
-bindsym $mod+a scratchpad show
+bindsym $mod+Shift+a scratchpad show
 
 # MOVE
 # Container left & right

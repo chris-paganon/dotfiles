@@ -14,7 +14,7 @@ if [ $attached_session -eq 1 ]; then
     tmux attach -t main \; new-window -c $current_dir \; detach
   fi
   # Run i3-msg to focus on the xfce4-terminal
-  i3-msg '[class="Xfce4-terminal"] focus'
+  i3-msg '[class="Xfce4-terminal"] focus; mark "terminal"'
 else
   if [ $current_dir = $HOME ]; then
     tmux attach -t main
