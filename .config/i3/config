@@ -18,7 +18,7 @@ exec_always --no-startup-id nm-applet
 
 exec --no-startup-id "sleep 12; nitrogen --restore;"
 exec --no-startup-id "sleep 12; i3-msg 'workspace 1; exec firefox;'"
-exec --no-startup-id "sleep 12; i3-msg 'workspace 2; exec xfce4-terminal;'"
+exec --no-startup-id "sleep 12; i3-msg 'exec xfce4-terminal;'"
 # exec --no-startup-id "sleep 12; i3-msg 'workspace 2; exec code;'"
 
 
@@ -75,6 +75,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 10 && pkill
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --decrease 10 && pkill -RTMIN+11 i3blocks
 bindsym XF86AudioMute exec --no-startup-id pamixer --toggle-mute && pkill -RTMIN+11 i3blocks
 
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause --player=spotify
+bindsym XF86AudioStop exec --no-startup-id playerctl play-pause --player=spotify
+bindsym XF86AudioNext exec --no-startup-id playerctl next --player=spotify
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous --player=spotify
+
 # Manage asus keyboard backlight & profiles
 bindsym $mod+F5 exec --no-startup-id asusctl profile -n && notify-send "ASUS Profile" "$(asusctl profile -p)"
 bindsym $mod+F4 exec --no-startup-id asusctl led-mode -n
@@ -112,8 +117,8 @@ bindsym $mod+s [con_mark="music"] scratchpad show
 for_window [class="Spotify"] mark "music"
 for_window [class="Spotify"] move scratchpad; [con_mark="music"] scratchpad show;
 for_window [class="Spotify"] resize set 1600 900
-for_window [class="Spotify"] move left 300
-for_window [class="Spotify"] move up 50
+for_window [class="Spotify"] move left 260
+for_window [class="Spotify"] move up 15
 
 bindsym Mod1+q exec --no-startup-id qalculate-gtk
 for_window [class="Qalculate-gtk"] floating enable
@@ -191,9 +196,6 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-# To workspace left & right (not sure I need this one)
-bindsym $mod+Control+Left workspace prev
-bindsym $mod+Control+Right workspace next
 # Move on same screen & scratchpad
 bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab workspace next_on_output
