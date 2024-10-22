@@ -61,9 +61,12 @@ alias ai-code="ollama run deepseek-coder-v2:16b"
 alias backg='nitrogen --restore'
 alias onlykey="/opt/OnlyKey/nw"
 alias dockerstop="docker stop \$(docker ps -q)"
+alias hybrid="supergfxctl -m Hybrid && xfce4-session-logout --logout --fast"
+alias integrated="supergfxctl -m Integrated && xfce4-session-logout --logout --fast"
 
 # remember fixes
 alias fixlight="asusctl led-pow-2 keyboard --awake"
+alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # scripts
 alias dev="./scripts/open-git-folder.sh"
