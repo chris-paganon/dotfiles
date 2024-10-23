@@ -16,11 +16,7 @@ for_window [class=".*"] title_format " <span size='smaller'>%title</span>"
 exec_always --no-startup-id picom
 exec_always --no-startup-id nm-applet
 
-exec --no-startup-id "sleep 12; nitrogen --restore;"
-exec --no-startup-id "sleep 12; i3-msg 'workspace 1; exec firefox;'"
-exec --no-startup-id "sleep 12; i3-msg 'exec xfce4-terminal;'"
-# exec --no-startup-id "sleep 12; i3-msg 'workspace 2; exec code;'"
-
+exec --no-startup-id "sleep 10; nitrogen --restore;"
 
 #                 #
 # ---- Style ---- #
