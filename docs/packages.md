@@ -15,6 +15,7 @@ cuda
 discord
 docker
 docker-compose
+downgrade
 efibootmgr
 exo
 fastfetch
