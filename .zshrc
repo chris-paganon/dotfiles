@@ -70,6 +70,8 @@ alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # scripts
 alias dev="./scripts/open-git-folder.sh"
+alias saver="asusctl profile -P Quiet && sudo systemctl stop ollama"
+alias deepsaver="saver && sudo pkill picom && sudo pkill blueman && sudo systemctl stop tailscaled"
 
 eval "$(fzf --zsh)"
 
