@@ -42,6 +42,7 @@ alias la='ls -a'
 alias copy="xsel -b -i"
 alias paste="xsel -b -o"
 alias gcaam='git add -A && git commit -m'
+alias sudogp="sudo SSH_AUTH_SOCK="$SSH_AUTH_SOCK" git push"
 
 # pacman aliases
 alias clean="yay -Sc"
