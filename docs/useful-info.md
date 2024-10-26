@@ -20,3 +20,6 @@ Run `xprop` then click on the window. `WM_CLASS(STRING)` 2nd string is the class
 
 ## Upload screenshots to imgur with flameshot
 https://flameshot.org/docs/guide/imgur-help/
+
+## Downgrade everything
+https://wiki.archlinux.org/title/Arch_Linux_Archive#How_to_restore_all_packages_to_a_specific_date
