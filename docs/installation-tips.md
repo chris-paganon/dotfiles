@@ -42,7 +42,7 @@ And [regenerate the initramfs](https://wiki.archlinux.org/title/Regenerate_the_i
 After creating a new user:
 - Install `yay`: https://github.com/Jguer/yay
 - Install the full package list from `packages.md` with `yay`
-- Setup etcfiles from my etcfiles repo
+- Setup etcfiles from my etcfiles repo. Replace `/home/chris` with your home directory in `pacman.d/hooks/list-installed.hook`
 - Setup dotfiles from here
 - There are probably some systemd services to enable 💁
 
