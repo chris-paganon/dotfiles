@@ -67,6 +67,7 @@ alias integrated="supergfxctl -m Integrated && xfce4-session-logout --logout --f
 # remember fixes
 alias fixlight="asusctl led-pow-2 keyboard --awake"
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias mkinit="sudo mkinitcpio -P"
 
 # scripts
 alias dev="./scripts/open-git-folder.sh"
