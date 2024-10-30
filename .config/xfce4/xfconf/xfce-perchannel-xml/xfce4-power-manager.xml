@@ -25,6 +25,6 @@
     <property name="power-button-action" type="uint" value="2"/>
     <property name="presentation-mode" type="bool" value="false"/>
     <property name="lid-action-on-ac" type="uint" value="1"/>
-    <property name="inactivity-sleep-mode-on-ac" type="uint" value="2"/>
+    <property name="inactivity-sleep-mode-on-ac" type="uint" value="1"/>
   </property>
 </channel>
