@@ -208,9 +208,7 @@ bindsym $mod+Mod1+Right move right
 
 # Move container to left & right output
 bindsym --whole-window $mod+button8 move container to output left; workspace next_on_output; focus output left
-bindsym $mod+Shift+Left move container to output left; workspace next_on_output; focus output left
 bindsym --whole-window $mod+button9 move container to output right; workspace next_on_output; focus output right
-bindsym $mod+Shift+Right move container to output right; workspace next_on_output; focus output right
 
 # Move container to left & right output on new workspace
 bindsym --whole-window $mod+Control+button8 move container to output left; workspace next_on_output; focus output left; exec --no-startup-id $move_to_next
@@ -220,9 +218,9 @@ bindsym $mod+Control+Right move container to output right; workspace next_on_out
 
 # Swap containers
 bindsym --whole-window $mod+Shift+button8 move container to output left; focus output left; focus left; move container to output right;
-bindsym $mod+Control+Shift+Left move container to output left; focus output left; focus left; move container to output right;
+bindsym $mod+Shift+Left move container to output left; focus output left; focus left; move container to output right;
 bindsym --whole-window $mod+Shift+button9 move container to output right; focus output right; focus right; move container to output left;
-bindsym $mod+Control+Shift+Right move container to output right; focus output right; focus right; move container to output left;
+bindsym $mod+Shift+Right move container to output right; focus output right; focus right; move container to output left;
 
 # To workspace on same screen
 # move window to next available workspace on same screen
