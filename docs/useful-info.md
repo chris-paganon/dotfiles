@@ -18,6 +18,9 @@ media.av1.enabled = false
 ## Get X11 software name
 Run `xprop` then click on the window. `WM_CLASS(STRING)` 2nd string is the class name
 
+## Get key name
+`xev` or to get just the relevant name `xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'`
+
 ## Upload screenshots to imgur with flameshot
 https://flameshot.org/docs/guide/imgur-help/
 

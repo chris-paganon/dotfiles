@@ -121,6 +121,7 @@ xfce4-settings
 xfce4-terminal
 xfconf
 xorg-server
+xorg-xev
 xorg-xrandr
 xsel
 yay
