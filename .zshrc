@@ -9,9 +9,6 @@ zstyle ':completion:*' max-errors 2 numeric
 zstyle ':completion:*' substitute 1
 zstyle :compinstall filename '/home/chris/.zshrc'
 
-autoload -Uz compinit
-compinit
-
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -78,7 +75,10 @@ alias dev="./scripts/open-git-folder.sh"
 alias saver="asusctl profile -P Quiet && sudo systemctl stop ollama"
 alias deepsaver="saver && sudo pkill picom && sudo pkill blueman && sudo systemctl stop tailscaled"
 
+source ~/.completion-for-pnpm.zsh
+
 eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

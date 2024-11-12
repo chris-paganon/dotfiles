@@ -127,5 +127,6 @@ xsel
 yay
 yay-debug
 zip
+zoxide
 zsh
 zsh-completions
