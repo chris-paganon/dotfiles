@@ -34,8 +34,12 @@ bindkey '^n' history-search-forward
 
 # common aliases
 alias c='clear'
+alias ls='lsd'
 alias ll='ls -al'
 alias la='ls -a'
+alias lla='ls -la'
+alias lt='lsd --tree'
+alias ltd='lt --depth'
 alias copy="xsel -b -i"
 alias paste="xsel -b -o"
 alias gcaam='git add -A && git commit -m'

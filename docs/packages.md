@@ -25,7 +25,6 @@ fzf
 garcon
 git
 git-delta
-gitui
 gnome-keyring
 go
 grub
@@ -49,6 +48,7 @@ lightdm-gtk-greeter-settings
 linux
 linux-firmware
 linux-headers
+lsd
 man-db
 man-pages
 mullvad-vpn-bin
@@ -108,6 +108,7 @@ tldr
 tmux
 transmission-gtk
 ttf-font-awesome
+ttf-sourcecodepro-nerd
 tumbler
 unzip
 v4l2loopback-dkms
