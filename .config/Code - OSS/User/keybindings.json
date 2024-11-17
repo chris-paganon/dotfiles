@@ -84,5 +84,15 @@
   {
     "key": "ctrl+q",
     "command": "-workbench.action.quit"
+  },
+  {
+    "key": "alt+right",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
   }
 ]
