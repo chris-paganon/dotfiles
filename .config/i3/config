@@ -88,7 +88,11 @@ bindsym $mod+F2 exec --no-startup-id asusctl led-mode static -c 000000
 bindsym $mod+q kill
 
 # start apps
-bindsym Mod1+space exec --no-startup-id rofi -font "SourceCodeVF 12" -show run
+bindsym Mod1+space exec --no-startup-id rofi -font "SourceCodeVF 12" -show run -kb-accept-entry "Return"
+
+# Alt Tab like on windows. https://github.com/davatorium/rofi/issues/38 (single monitor only)
+bindsym Mod1+Tab exec --no-startup-id rofi -font "SourceCodeVF 12" -show window -selected-row 1
+bindsym Mod1+Escape workspace back_and_forth
 
 bindsym Mod1+c exec --no-startup-id code
 bindsym Mod1+Control+c exec --no-startup-id $start_on_next code
@@ -195,7 +199,6 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 # Move on same screen & scratchpad
-bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+Shift+a scratchpad show
 

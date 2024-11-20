@@ -11,3 +11,9 @@
 window {
     border-radius: 5px;
 }
+
+configuration {
+    kb-accept-entry: "!Alt-Tab,!Alt+Alt_L,Alt+Return,Return";
+    kb-row-down: "Alt+Tab,Alt+Down,Down";
+    kb-row-up: "Alt+Up,Up";
+}
