@@ -16,6 +16,7 @@ discord
 docker
 docker-compose
 downgrade
+dust
 efibootmgr
 exo
 fastfetch
