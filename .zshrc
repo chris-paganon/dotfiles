@@ -32,6 +32,12 @@ bindkey -e
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
+# delete word with ctrl+backspace
+bindkey '^H' backward-delete-word
+
+# only used for zsh-autosuggest word completion: use next word suggestion with alt+right
+bindkey '^[[1;3C' vi-forward-word
+
 # common aliases
 alias c='clear'
 alias ls='lsd'
