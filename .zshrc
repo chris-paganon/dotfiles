@@ -49,6 +49,7 @@ alias ltd='lt --depth'
 alias copy="xsel -b -i"
 alias paste="xsel -b -o"
 alias gcaam='git add -A && git commit -m'
+alias glolu="git log -u HEAD~40 HEAD"
 alias sudogp="sudo SSH_AUTH_SOCK="$SSH_AUTH_SOCK" git push"
 alias grepm='grep -C 5 -B 5'
 alias duh="du -h --max-depth=1"
@@ -84,6 +85,9 @@ alias mkinit="sudo mkinitcpio -P"
 alias dev="./scripts/open-git-folder.sh"
 alias saver="asusctl profile -P Quiet && sudo systemctl stop ollama"
 alias deepsaver="saver && sudo pkill picom && sudo pkill blueman && sudo systemctl stop tailscaled"
+
+# to remember
+alias cleanlogs="sudo journalctl --vacuum-time=2weeks"
 
 source ~/.completion-for-pnpm.zsh
 
