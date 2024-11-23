@@ -194,6 +194,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 #  - full screen toggle - mod + shift + middle mouse
 
 # FOCUS
+bindsym $mod+p focus parent
 # Move on windows
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -205,10 +206,10 @@ bindsym $mod+Shift+a scratchpad show
 
 # MOVE
 # Container left & right
-bindsym $mod+Mod1+Left move left
-bindsym $mod+Mod1+Down move down
-bindsym $mod+Mod1+Up move up
-bindsym $mod+Mod1+Right move right
+bindsym $mod+Home move left
+bindsym $mod+Next move down
+bindsym $mod+Prior move up
+bindsym $mod+End move right
 
 # Move container to left & right output
 bindsym --whole-window $mod+button8 move container to output left; workspace next_on_output; focus output left
