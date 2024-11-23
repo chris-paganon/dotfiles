@@ -4,7 +4,7 @@
   <property name="font-name" type="string" value="SourceCodeVF Medium 12"/>
   <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
   <property name="misc-confirm-close" type="bool" value="false"/>
-  <property name="run-custom-command" type="bool" value="true"/>
+  <property name="run-custom-command" type="bool" value="false"/>
   <property name="custom-command" type="string" value="/home/chris/.config/tmux/open-main-tmux.sh"/>
   <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_SOLID"/>
   <property name="background-darkness" type="double" value="0.84999999999999998"/>
