@@ -107,6 +107,7 @@ thunar-archive-plugin
 thunar-volman
 tldr
 tmux
+tmuxp
 transmission-gtk
 ttf-font-awesome
 ttf-sourcecodepro-nerd
