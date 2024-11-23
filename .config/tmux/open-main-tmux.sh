@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Set NO_TMUX variable to disable tmux auto-start
+if [[ -n "${NO_TMUX}" ]] {
+  return
+}
+
 # If tmux is not installed, not running on X11 or already inside TMUX, exit
 if [ ! -x "$(command -v tmux)" ] || [ -z "${DISPLAY}" ] || [ -n "${TMUX}" ]; then
   return
