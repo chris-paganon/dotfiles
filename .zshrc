@@ -49,8 +49,8 @@ alias ltd='lt --depth'
 alias copy="xsel -b -i"
 alias paste="xsel -b -o"
 alias gcaam='git add -A && git commit -m'
-# alias glolu="git log -u $(git rev-list --max-parents=0 HEAD) HEAD"
-alias sudogp="sudo SSH_AUTH_SOCK="$SSH_AUTH_SOCK" git push"
+alias glolu='git log -u $(git rev-list --max-parents=0 HEAD) HEAD'
+alias sudogp='sudo SSH_AUTH_SOCK="$SSH_AUTH_SOCK" git push'
 alias grepm='grep -C 5 -B 5'
 alias duh="du -h --max-depth=1"
 alias duhs="du -h --max-depth=1 | sort -hr"
