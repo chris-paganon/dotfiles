@@ -45,6 +45,7 @@ After creating a new user:
 - Setup etcfiles from my etcfiles repo. Replace `/home/chris` with your home directory in `pacman.d/hooks/list-installed.hook`
 - Setup dotfiles from here
 - Enable `zsh` as default: https://wiki.archlinux.org/title/Command-line_shell#Changing_your_default_shell 
+- Get a nice wallpaper and open nitrogen to set it
 - There are probably some systemd services to enable 💁
 
 ## Not an ASUS laptop?
