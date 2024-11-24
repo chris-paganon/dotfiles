@@ -4,6 +4,7 @@
 // @theme "Adapta-Nokto"
 
 * {
+    font: "SourceCodeVF 12";
     background: rgba ( 0, 43, 55, 90 % );
     foreground: rgba ( 200, 216, 219, 100 % );
 }
