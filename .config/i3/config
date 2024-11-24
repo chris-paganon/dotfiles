@@ -103,11 +103,16 @@ bindsym Mod1+t exec --no-startup-id xfce4-terminal
 bindsym Mod1+Control+t exec --no-startup-id xfce4-terminal -H -e "/bin/bash -c 'NO_TMUX=1 /bin/zsh'"
 bindsym Mod1+a exec --no-startup-id xfce4-terminal
 bindsym $mod+a [con_mark="terminal"] scratchpad show
-for_window [class="Xfce4-terminal"] mark "terminal"
-for_window [class="Xfce4-terminal"] move scratchpad; [con_mark="terminal"] scratchpad show;
-for_window [class="Xfce4-terminal"] resize set 1600 900
-for_window [class="Xfce4-terminal"] move left 300
-for_window [class="Xfce4-terminal"] move up 50
+for_window [class="Xfce4-terminal" title="Terminal"] mark "terminal"
+for_window [class="Xfce4-terminal" title="Terminal"] move scratchpad, scratchpad show;
+for_window [class="Xfce4-terminal" title="Terminal"] resize set 1600 900
+for_window [class="Xfce4-terminal" title="Terminal"] move left 300
+for_window [class="Xfce4-terminal" title="Terminal"] move up 50
+
+for_window [class="Xfce4-terminal" title="temporary"] move scratchpad, scratchpad show;
+for_window [class="Xfce4-terminal" title="temporary"] resize set 1600 900
+for_window [class="Xfce4-terminal" title="temporary"] move left 350
+for_window [class="Xfce4-terminal" title="temporary"] move up 30
 
 bindsym Mod1+f exec --no-startup-id firefox
 bindsym Mod1+Control+f exec --no-startup-id $start_on_next firefox

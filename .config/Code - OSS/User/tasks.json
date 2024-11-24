@@ -6,7 +6,7 @@
     {
       "label": "open-file-git-history",
       "type": "shell",
-      "command": "xfce4-terminal -e \"zsh -c 'git log -u $(git rev-list --max-parents=0 HEAD) HEAD ${file}'\"",
+      "command": "xfce4-terminal --title=temporary -e \"zsh -c 'git log -u $(git rev-list --max-parents=0 HEAD) HEAD ${file}'\"",
       "presentation": {
         "reveal": "silent",
       }
