@@ -102,5 +102,10 @@
   {
     "key": "ctrl+shift+n",
     "command": "openInTerminal"
-  }
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "workbench.action.tasks.runTask",
+    "args": "open-file-git-history"
+  },
 ]
