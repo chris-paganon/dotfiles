@@ -65,8 +65,8 @@ focus_on_window_activation urgent
 # xfce4 keybindings
 bindsym $mod+Mod1+s exec --no-startup-id xfce4-settings-manager
 bindsym $mod+Mod1+l exec --no-startup-id xflock4
-bindsym $mod+Mod1+e exec --no-startup-id notify-send --action "shutdown now=Shutdown" "Shutdown now?" | xargs -0 sh -c
 bindsym $mod+Mod1+d exec --no-startup-id xfce4-display-settings
+bindsym $mod+Mod1+e exec --no-startup-id rofi -show logout -modes "logout:~/.config/rofi/rofi-logout.sh" -kb-accept-entry "Return"
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 10 && pkill -RTMIN+11 i3blocks
