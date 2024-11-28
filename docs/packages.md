@@ -77,7 +77,6 @@ os-prober
 pamixer
 pavucontrol
 picom
-pipdeptree
 playerctl
 pulseaudio
 python-poetry
