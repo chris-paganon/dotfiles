@@ -95,6 +95,7 @@ snapper
 spotify-launcher
 sqlitebrowser
 sshfs
+starship
 steam
 stow
 stripe-cli
