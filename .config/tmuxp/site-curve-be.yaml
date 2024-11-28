@@ -11,7 +11,7 @@ windows:
   - firebase emulators:start --only functions:typescript
   - shell_command:
     - cd ./frontend
-    - npm start
+    - REACT_APP_USE_LOCAL=true npm start
   - shell_command:
     - cd ./functions/typescript
     - npm run build:watch
