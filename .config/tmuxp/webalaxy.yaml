@@ -1,14 +1,13 @@
 session_name: webalaxy
-start_directory: ~/
+start_directory: ~/Documents/webalaxy/projects/site-curve/site-curve-internal
 
 windows:
-- window_name: home
-- window_name: site-curve
+- window_name: run
   layout: even-horizontal
   focus: true
-  start_directory: ~/Documents/webalaxy/projects/site-curve/site-curve-internal
   panes:
   - shell_command:
     - cd ./frontend
     - npm start
   - focus: false
+- window_name: cli

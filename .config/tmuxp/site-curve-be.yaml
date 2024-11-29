@@ -1,12 +1,10 @@
 session_name: sc-be
-start_directory: ~/
+start_directory: ~/Documents/webalaxy/projects/site-curve/site-curve-internal
 
 windows:
-- window_name: home
-- window_name: sc-run
+- window_name: run
   layout: main-vertical
   focus: true
-  start_directory: ~/Documents/webalaxy/projects/site-curve/site-curve-internal
   panes:
   - firebase emulators:start --only functions:typescript
   - shell_command:
@@ -15,8 +13,8 @@ windows:
   - shell_command:
     - cd ./functions/typescript
     - npm run build:watch
+- window_name: cli
 - window_name: stripe
-  start_directory: ~/Documents/webalaxy/projects/site-curve/site-curve-internal
   layout: main-horizontal
   panes:
   - focus: true

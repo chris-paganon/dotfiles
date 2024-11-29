@@ -2,7 +2,8 @@ session_name: config
 start_directory: ~/
 
 windows:
-- window_name: home
 - window_name: dotfiles
   focus: true
   start_directory: ~/dotfiles
+- window_name: etcfiles
+  start_directory: /etc/etcfiles
