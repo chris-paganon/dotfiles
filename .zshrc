@@ -68,6 +68,7 @@ alias aliasgit='alias | grep git'
 alias aliasnpm='alias | grep npm'
 
 # specific tools aliases
+alias cd="z"
 alias ai='ollama run llama3.2:3b'
 alias ai-code="ollama run deepseek-coder-v2:16b"
 alias backg='nitrogen --restore'
@@ -80,6 +81,7 @@ alias integrated="supergfxctl -m Integrated && xfce4-session-logout --logout --f
 alias fixlight="asusctl led-pow-2 keyboard --awake"
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mkinit="sudo mkinitcpio -P"
+alias reopenx="chvt 7"
 
 # scripts
 alias dev="./scripts/open-git-folder.sh"
