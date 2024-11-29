@@ -21,7 +21,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="frontcube" # best: frontcube, josh, jispwoso, intheloop, gnzh, refined | good: murilasso, strug | other: peepcode, sporty_256
+# ZSH_THEME="frontcube" # best: frontcube, josh, jispwoso, intheloop, gnzh, refined | good: murilasso, strug | other: peepcode, sporty_256
 plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
 source $ZSH/oh-my-zsh.sh
 
