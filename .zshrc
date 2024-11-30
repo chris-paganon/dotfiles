@@ -39,6 +39,7 @@ bindkey '^H' backward-delete-word
 bindkey '^[[1;3C' vi-forward-word
 
 # common aliases
+alias sudo="sudo "
 alias c='clear'
 alias ls='lsd'
 alias ll='ls -al'
