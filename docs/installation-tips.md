@@ -38,13 +38,33 @@ Add `resume` (for [hibernation](https://wiki.archlinux.org/title/Power_managemen
 
 And [regenerate the initramfs](https://wiki.archlinux.org/title/Regenerate_the_initramfs "Regenerate the initramfs"):
 `mkinitcpio -P`
+
 ## Install my software and config
-After creating a new user:
+
+### Install and setup `sudo`
+- Install sudo: `sudo pacman -S sudo`
+- Enable sudo for wheel group, keep password accross all shells and increase timeout to 30min. 
+  - Run `sudo visudo`
+  - Add these lines:
+```shell
+Defaults timestamp_type=global
+Defaults timestamp_timeout=30
+```
+  - Uncomment `%wheel ALL=(ALL) ALL`
+
+### Create a new user and add it to wheel & docker groups
+- Run `useradd -m -G wheel,docker chris`
+
+### Login as new user
+- Run `su chris`
+- Change password: `passwd`
+
+### Setup the rest of the software and config:
 - Install `yay`: https://github.com/Jguer/yay
 - Install the full package list from `packages.md` with `yay`
 - Setup etcfiles from my etcfiles repo. Replace `/home/chris` with your home directory in `pacman.d/hooks/list-installed.hook`
 - Setup dotfiles from here
-- Enable `zsh` as default: https://wiki.archlinux.org/title/Command-line_shell#Changing_your_default_shell 
+- Enable `zsh` as default: https://wiki.archlinux.org/title/Command-line_shell#Changing_your_default_shell
 - Get a nice wallpaper and open nitrogen to set it
 - There are probably some systemd services to enable 💁
 
