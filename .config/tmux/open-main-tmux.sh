@@ -11,10 +11,10 @@ if [ ! -x "$(command -v tmux)" ] || [ -z "${DISPLAY}" ] || [ -n "${TMUX}" ]; the
 fi
 
 current_dir=$(pwd)
-tmux has-session -t main
+session_name=$(tmux display-message -p '#S')
 
 # If no session exists, create one and attach to it
-if [ $? != 0 ]; then
+if [[ $session_name == *"no server running"* || $session_name == *"no session"* || -z "$session_name" ]]; then
   exec tmux new -A -s main -c $current_dir
   return
 fi
@@ -24,7 +24,6 @@ attached_session=$(tmux list-sessions | grep -c "(attached)")
 if [ $attached_session -eq 1 ]; then
   if [ $current_dir != $HOME ]; then
     # get the session name
-    session_name=$(tmux display-message -p '#S')
     tmux new-window -t $session_name -c $current_dir
   fi
   # Run i3-msg to focus on the xfce4-terminal and exit the current shell/terminal
