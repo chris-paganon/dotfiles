@@ -15,7 +15,12 @@ session_name=$(tmux display-message -p '#S')
 
 # If no session exists, create one and attach to it
 if [[ $session_name == *"no server running"* || $session_name == *"no session"* || -z "$session_name" ]]; then
-  exec tmux new -A -s main -c $current_dir
+  if [[ $current_dir != $HOME ]]; then
+    exec tmux new -A -s main -c $HOME \; new-window -c $current_dir
+    return
+  fi
+
+  exec tmux new -A -s main
   return
 fi
 
