@@ -93,7 +93,7 @@ bindsym $mod+Mod1+space exec --no-startup-id rofi -show tmuxp -modes "tmuxp:~/.c
 
 # Alt Tab like on windows. https://github.com/davatorium/rofi/issues/38 (single monitor only)
 bindsym Mod1+Tab exec --no-startup-id rofi -font "SourceCodeVF 12" -show window -selected-row 1
-bindsym Mod1+Escape workspace back_and_forth
+bindsym $mod+Escape workspace back_and_forth
 
 bindsym Mod1+c exec --no-startup-id code
 bindsym Mod1+Control+c exec --no-startup-id $start_on_next code
@@ -212,10 +212,10 @@ bindsym $mod+Shift+a scratchpad show
 
 # MOVE
 # Container left & right
-bindsym $mod+Home move left
-bindsym $mod+Next move down
-bindsym $mod+Prior move up
-bindsym $mod+End move right
+bindsym $mod+Mod1+Left move left
+bindsym $mod+Mod1+Down move down
+bindsym $mod+Mod1+Up move up
+bindsym $mod+Mod1+Right move right
 
 # Move container to left & right output
 bindsym --whole-window $mod+button8 move container to output left; workspace next_on_output; focus output left
