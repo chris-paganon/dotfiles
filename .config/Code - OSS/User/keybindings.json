@@ -108,4 +108,24 @@
     "command": "workbench.action.tasks.runTask",
     "args": "open-file-git-history"
   },
+  {
+    "key": "ctrl+up", 
+    "command": "cursorMove",
+    "args": {
+        "to": "up",
+        "by": "line",
+        "value": 7,
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "cursorMove",
+    "args": {
+        "to": "down",
+        "by": "line",
+        "value": 7,
+    },
+    "when": "editorTextFocus"
+  },
 ]
