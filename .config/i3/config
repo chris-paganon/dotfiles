@@ -53,6 +53,8 @@ bar {
 set $mod Mod4
 set $move_to_next ~/.config/i3/move-to-next.sh
 set $start_on_next ~/.config/i3/start-on-next.sh
+set $open_next ~/.config/i3/open-next.sh
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
@@ -89,6 +91,7 @@ bindsym $mod+q kill
 
 # start apps
 bindsym Mod1+space exec --no-startup-id rofi -show run -kb-accept-entry "Return"
+bindsym Mod1+Control+space exec --no-startup-id $open_next; exec --no-startup-id rofi -show run -kb-accept-entry "Return"
 bindsym $mod+Mod1+space exec --no-startup-id rofi -show tmuxp -modes "tmuxp:~/.config/rofi/rofi-tmuxp.sh" -kb-accept-entry "Return"
 
 # Alt Tab like on windows. https://github.com/davatorium/rofi/issues/38 (single monitor only)
