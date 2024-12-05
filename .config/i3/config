@@ -132,6 +132,9 @@ for_window [class="Spotify"] resize set 1600 900
 for_window [class="Spotify"] move left 260
 for_window [class="Spotify"] move up 15
 
+bindsym Mod1+o exec --no-startup-id obsidian
+bindsym Mod1+Control+o exec --no-startup-id $start_on_next obsidian
+
 bindsym Mod1+q exec --no-startup-id qalculate-gtk
 for_window [class="Qalculate-gtk"] floating enable
 
