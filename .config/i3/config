@@ -84,7 +84,9 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous --player=spotify
 bindsym $mod+F5 exec --no-startup-id asusctl profile -n && notify-send "ASUS Profile" "$(asusctl profile -p)"
 bindsym $mod+F4 exec --no-startup-id asusctl led-mode -n
 bindsym $mod+F3 exec --no-startup-id asusctl led-mode static -c ffffff
+bindsym XF86AudioMicMute exec --no-startup-id asusctl led-mode static -c ffffff
 bindsym $mod+F2 exec --no-startup-id asusctl led-mode static -c 000000
+bindsym XF86Launch1 exec --no-startup-id asusctl led-mode static -c 000000
 
 # kill focused window
 bindsym $mod+q kill
