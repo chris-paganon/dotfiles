@@ -22,7 +22,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="frontcube" # best: frontcube, josh, jispwoso, intheloop, gnzh, refined | good: murilasso, strug | other: peepcode, sporty_256
-plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting fzf-tab)
+plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting fzf-tab gitfast)
 source $ZSH/oh-my-zsh.sh
 
 autoload -Uz compinit
@@ -49,6 +49,7 @@ alias lt='lsd --tree'
 alias ltd='lt --depth'
 alias copy="xsel -b -i"
 alias paste="xsel -b -o"
+alias gco='git checkout --no-guess'
 alias gcaam='git add -A && git commit -m'
 alias glolu='git log -u $(git rev-list --max-parents=0 HEAD) HEAD'
 alias sudogp='sudo SSH_AUTH_SOCK="$SSH_AUTH_SOCK" git push'
