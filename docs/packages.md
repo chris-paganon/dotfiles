@@ -9,6 +9,7 @@ btop
 btrfs-assistant
 btrfs-progs
 chromium
+cht.sh-git
 code
 cronie
 cuda

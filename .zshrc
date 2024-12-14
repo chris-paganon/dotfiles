@@ -92,6 +92,7 @@ alias deepsaver="saver && sudo pkill picom && sudo pkill blueman && sudo systemc
 alias cleanlogs="sudo journalctl --vacuum-time=2weeks"
 
 source ~/.completion-for-pnpm.zsh
+fpath=(~/.zsh.d/ $fpath)
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
