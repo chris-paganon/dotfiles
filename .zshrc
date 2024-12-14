@@ -59,7 +59,7 @@ alias duhs="du -h --max-depth=1 | sort -hr"
 
 # pacman aliases
 alias clean="yay -Sc"
-alias deepclean="yay -Qtdq | yay -Rns -"
+alias deepclean="yay -Sc && yay -Qtdq | yay -Rns -"
 alias installed="pacman -Qqe"
 alias yeet="yay -Rns"
 alias hmmm="yay -Sy &> /dev/null && yay -Qu"
@@ -73,7 +73,7 @@ alias aliasnpm='alias | grep npm'
 alias cd="z"
 alias ai='ollama run llama3.2:3b'
 alias ai-code="ollama run deepseek-coder-v2:16b"
-alias backg='nitrogen --restore'
+alias b='nitrogen --restore'
 alias dockerstop="docker stop \$(docker ps -q)"
 alias hybrid="supergfxctl -m Hybrid && xfce4-session-logout --logout --fast"
 alias integrated="supergfxctl -m Integrated && xfce4-session-logout --logout --fast"
@@ -87,7 +87,7 @@ alias reopenx="chvt 7"
 # scripts
 alias dev="./scripts/open-git-folder.sh"
 alias saver="asusctl profile -P Quiet && sudo systemctl stop ollama"
-alias deepsaver="saver && sudo pkill picom && sudo pkill blueman && sudo systemctl stop tailscaled"
+alias deepsaver="saver && sudo pkill picom && sudo systemctl stop tailscaled"
 
 # to remember
 alias cleanlogs="sudo journalctl --vacuum-time=2weeks"
