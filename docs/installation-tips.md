@@ -66,7 +66,10 @@ Defaults timestamp_timeout=30
 - Setup dotfiles from here
 - Enable `zsh` as default: https://wiki.archlinux.org/title/Command-line_shell#Changing_your_default_shell
 - Get a nice wallpaper and open nitrogen to set it
-- There are probably some systemd services to enable 💁
+
+## Some services to enable
+- clean the pacman cache periodically: `sudo systemctl enable --now paccache.timer`
+- There are probably more systemd services to enable 💁
 
 ## Not an ASUS laptop?
 `supergfxctl` and `asusctl`from my packages are for ASUS laptops only. Probably need to replace `supergfxctl` with [optimus manager](https://github.com/Askannz/optimus-manager) otherwise and remove `asusctl` (hopefully keyboard lights just work).
