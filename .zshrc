@@ -83,6 +83,7 @@ alias fixlight="asusctl led-pow-2 keyboard --awake"
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mkinit="sudo mkinitcpio -P"
 alias reopenx="chvt 7"
+alias fixtime="sudo sntp -S pool.ntp.org && sudo hwclock -w"
 
 # scripts
 alias dev="./scripts/open-git-folder.sh"
