@@ -18,7 +18,7 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueman-applet
 exec_always --no-startup-id start-pulseaudio-x11
 
-exec --no-startup-id "sleep 10; nitrogen --restore;"
+exec --no-startup-id "sleep 4; nitrogen --restore;"
 
 #                 #
 # ---- Style ---- #
