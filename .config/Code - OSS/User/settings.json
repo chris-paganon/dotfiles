@@ -15,7 +15,8 @@
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
   "editor.cursorSurroundingLines": 15,
+  "editor.cursorStyle": "block",
   "tailwindCSS.experimental.classRegex": [
     ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
+  ],
 }
