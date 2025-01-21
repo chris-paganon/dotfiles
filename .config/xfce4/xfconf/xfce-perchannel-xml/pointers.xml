@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="pointers" version="1.0">
   <property name="ASUE120D00_04F331FB_Touchpad" type="empty">
@@ -18,6 +18,12 @@
   <property name="Razer_Razer_DeathAdder_Essential" type="empty">
     <property name="RightHanded" type="bool" value="true"/>
     <property name="Threshold" type="int" value="1"/>
-    <property name="Acceleration" type="double" value="2.5"/>
+    <property name="Acceleration" type="double" value="2.3999999999999999"/>
+    <property name="ReverseScrolling" type="bool" value="false"/>
+  </property>
+  <property name="Razer_Razer_DeathAdder_Essential_Keyboard" type="empty">
+    <property name="RightHanded" type="bool" value="true"/>
+    <property name="Threshold" type="int" value="4"/>
+    <property name="Acceleration" type="double" value="2"/>
   </property>
 </channel>
