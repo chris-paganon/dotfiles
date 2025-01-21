@@ -1,12 +1,11 @@
-@theme "solarized_alternate"
+@theme "catppuccin-mocha"
+// @theme "solarized_alternate"
 // @theme "Arc-Dark"
 // @theme "blue"
 // @theme "Adapta-Nokto"
 
 * {
     font: "SourceCodeVF 12";
-    background: rgba ( 0, 43, 55, 90 % );
-    foreground: rgba ( 200, 216, 219, 100 % );
 }
 
 window {
@@ -17,4 +16,16 @@ configuration {
     kb-accept-entry: "!Alt-Tab,!Alt_L,!Alt+Alt_L,Alt+Return,Return";
     kb-row-down: "Alt+Tab,Alt+Down,Down";
     kb-row-up: "Alt+Up,Up";
+    modi: "run,drun,window";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: " 󰕰  Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
 }
