@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-terminal" version="1.0">
   <property name="font-name" type="string" value="SourceCodeVF Medium 12"/>
@@ -8,21 +8,21 @@
   <property name="custom-command" type="string" value="/home/chris/.config/tmux/open-main-tmux.sh"/>
   <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_SOLID"/>
   <property name="background-darkness" type="double" value="0.84999999999999998"/>
-  <property name="color-background" type="string" value="#111117171e1e"/>
-  <property name="color-foreground" type="string" value="#ffffff"/>
+  <property name="color-background" type="string" value="#1e1e2e"/>
+  <property name="color-foreground" type="string" value="#cdd6f4"/>
   <property name="color-background-vary" type="bool" value="false"/>
-  <property name="color-cursor-foreground" type="string" value=""/>
-  <property name="color-cursor" type="string" value=""/>
-  <property name="color-cursor-use-default" type="bool" value="true"/>
-  <property name="color-selection" type="string" value=""/>
-  <property name="color-selection-background" type="string" value=""/>
-  <property name="color-selection-use-default" type="bool" value="true"/>
+  <property name="color-cursor-foreground" type="string" value="#11111b"/>
+  <property name="color-cursor" type="string" value="#f5e0dc"/>
+  <property name="color-cursor-use-default" type="bool" value="false"/>
+  <property name="color-selection" type="string" value="#cdd6f4"/>
+  <property name="color-selection-background" type="string" value="#585b70"/>
+  <property name="color-selection-use-default" type="bool" value="false"/>
   <property name="color-bold" type="string" value=""/>
   <property name="color-bold-use-default" type="bool" value="true"/>
-  <property name="color-palette" type="string" value="rgb(0,0,0);rgb(204,0,0);rgb(78,154,6);rgb(255,192,5);rgb(52,101,164);rgb(117,80,123);rgb(6,152,154);rgb(211,215,207);rgb(85,87,83);rgb(239,41,41);rgb(138,226,52);rgb(255,208,10);rgb(115,159,207);rgb(173,127,168);rgb(52,226,226);rgb(238,238,236)"/>
+  <property name="color-palette" type="string" value="#45475a;#f38ba8;#a6e3a1;#f9e2af;#89b4fa;#f5c2e7;#94e2d5;#bac2de;#585b70;#f38ba8;#a6e3a1;#f9e2af;#89b4fa;#f5c2e7;#94e2d5;#a6adc8"/>
   <property name="color-bold-is-bright" type="bool" value="true"/>
   <property name="color-use-theme" type="bool" value="false"/>
-  <property name="tab-activity-color" type="string" value="#aa0000"/>
+  <property name="tab-activity-color" type="string" value="#fab387"/>
   <property name="font-allow-bold" type="bool" value="true"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
   <property name="kinetic-scrolling" type="bool" value="false"/>
