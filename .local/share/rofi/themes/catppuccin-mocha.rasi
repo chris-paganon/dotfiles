@@ -2,7 +2,7 @@
     bg-col:  #1e1e2e;
     bg-col-light: #1e1e2e;
     border-col: #1e1e2e;
-    selected-col: #1e1e2e;
+    selected-col: #313244;
     blue: #89b4fa;
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
@@ -20,6 +20,7 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     border: 3px;
+    padding: 10px;
     border-color: @border-col;
     background-color: @bg-col;
 }
@@ -77,6 +78,7 @@ element-icon {
 element selected {
     background-color:  @selected-col ;
     text-color: @fg-col2  ;
+    border-radius: 5px;
 }
 
 mode-switcher {
