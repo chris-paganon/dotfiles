@@ -92,6 +92,7 @@ skypeforlinux-bin
 snap-pac
 snap-pac-grub
 snapper
+spicetify-cli
 spotify-launcher
 sqlitebrowser
 sshfs
