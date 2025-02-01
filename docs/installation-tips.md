@@ -98,3 +98,5 @@ dynamic_power_management=fine
 ```
 
 But to truly save battery, need to switch to integrate graphics somehow ([config 2, 3 or 4](https://github.com/Askannz/optimus-manager/wiki/A-guide--to-power-management-options))
+
+jack2 was removed with pacman

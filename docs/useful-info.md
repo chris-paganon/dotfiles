@@ -26,3 +26,5 @@ https://flameshot.org/docs/guide/imgur-help/
 
 ## Downgrade everything
 https://wiki.archlinux.org/title/Arch_Linux_Archive#How_to_restore_all_packages_to_a_specific_date
+
+## Might fix some audio mic issues by disabing interna mic with hdajackretask (from alsa-tools)
