@@ -8,12 +8,9 @@ bluez-utils
 btop
 btrfs-assistant
 btrfs-progs
-chromium
 cht.sh-git
-code
 cronie
 cuda
-discord
 docker
 docker-compose
 downgrade
@@ -21,7 +18,6 @@ dust
 efibootmgr
 exo
 fastfetch
-firefox
 flameshot
 fzf
 garcon
@@ -42,7 +38,6 @@ interception-caps2esc
 interception-tools
 jdk11-openjdk
 jq
-keep-presence
 libreoffice-still
 lightdm
 lightdm-gtk-greeter
@@ -68,9 +63,6 @@ numlockx
 nvidia
 nvidia-settings
 nvidia-utils
-obs-backgroundremoval
-obs-studio
-obsidian
 ollama-cuda
 onlykey
 openssh
@@ -88,7 +80,6 @@ rog-control-center
 rsync
 seahorse
 simplescreenrecorder
-skypeforlinux-bin
 snap-pac
 snap-pac-grub
 snapper
@@ -97,7 +88,6 @@ spotify-launcher
 sqlitebrowser
 sshfs
 starship
-steam
 stow
 stripe-cli
 sudo
@@ -117,7 +107,6 @@ tumbler
 unzip
 v4l2loopback-dkms
 vi
-vlc
 xarchiver
 xfce4-power-manager
 xfce4-screensaver
