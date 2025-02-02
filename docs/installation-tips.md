@@ -4,8 +4,6 @@
 - ⚠ Don't forget to install `networkmanager` before rebooting into live USB
 
 ### [btrfs: subvolumes, mounting & swap](https://wiki.archlinux.org/title/BtrfsRecommended [btrfs](https://wiki.archlinux.org/title/Btrfs) 
-**Some of this might be slightly wrong or out of order. Gotta do it once from scratch to be sure**
-
  [After formatting the partition to btrfs:](https://wiki.archlinux.org/title/Installation_guide#Format_the_partitions)
 Create these subvolumes at root from live USB (example: `btrfs subvolume create /mnt/@swap):
 - /@
@@ -17,14 +15,14 @@ Re-mount with `/@` to set it up as default:
 ```
 umount /mnt
 mount /dev/partitionId /mnt -o subvol=/@
-btrfs subvolume set-default /mnt (not entirely sure about this one, may be: btrfs subvolume set-default subvolume-id /mnt)
+btrfs subvolume set-default subvolume-id /mnt
 umount /mnt
 mount /dev/partitionId /mnt (this should have mounted /@ this time)
 ```
 
-After [installing GRUB](https://wiki.archlinux.org/title/Installation_guide#Boot_loader) and before booting for the 1st time:
-1. Keep the existing UUID from fstab contents
-2. Copy over the fstab content from my etcfiles repo tp define all the subvolumes mount points
+After running `genfstab`:
+1. Keep the existing UUID from `fstab` contents
+2. Copy over the `fstab` content from my etcfiles repo to define all the subvolumes mount points
 3. Replace etcfiles UUIDs with the one saved from 1
 
 Create the swap file and enable it (https://wiki.archlinux.org/title/Btrfs#Swap_file):
@@ -38,9 +36,7 @@ Add `resume` (for [hibernation](https://wiki.archlinux.org/title/Power_managemen
 
 And [regenerate the initramfs](https://wiki.archlinux.org/title/Regenerate_the_initramfs "Regenerate the initramfs"):
 `mkinitcpio -P`
-
 ## Install my software and config
-
 ### Install and setup `sudo`
 - Install sudo: `sudo pacman -S sudo`
 - Enable sudo for wheel group, keep password accross all shells and increase timeout to 30min. 
@@ -59,13 +55,38 @@ Defaults timestamp_timeout=30
 - Run `su chris`
 - Change password: `passwd`
 
+### Get to a simple GUI
+```
+pacman -S xfwm4 xfce4-power-manager xfce4-screensaver xfce4-session xfce4-settings xfce4-terminal xfconf exo garcon thunar thunar-archive-plugin thunar-volman tumbler
+```
 ### Setup the rest of the software and config:
 - Install `yay`: https://github.com/Jguer/yay
 - Install the full package list from `packages.md` with `yay`
-- Setup etcfiles from my etcfiles repo. Replace `/home/chris` with your home directory in `pacman.d/hooks/list-installed.hook`
-- Setup dotfiles from here
+- Only run `stow . --adpot` in dotfiles & etcfiles once all the software has been installed. otherwise you stow entire directories instead of specific files
 - Enable `zsh` as default: https://wiki.archlinux.org/title/Command-line_shell#Changing_your_default_shell
 - Get a nice wallpaper and open nitrogen to set it
+
+#### Install flatpak software from `flatpak.md`
+#### Software with manual install
+- install vscode extensions from dotfiles `extensions.md`
+##### Catppuccin:
+- spicetify need to run this 1st: 
+```
+spicetify
+spicetify backup apply
+```
+Then follow instructions here: https://github.com/catppuccin/spicetify
+
+- discord, 1st run: `betterdiscordctl -i flatpak install`. Then follow instructions here: https://github.com/catppuccin/discord
+- firefox: go here, click on mocha>mauve and install: https://github.com/catppuccin/firefox
+- many websites: foolow these instructions: https://github.com/catppuccin/userstyles/blob/main/docs/USAGE.md#all-userstyles
+#### dotfiles
+- Setup etcfiles from my etcfiles repo
+	- Replace `/home/chris` with your home directory in `pacman.d/hooks/list-installed.hook`
+	- Add the files referenced in `lightdm-gtk-greeter.conf`
+- Setup dotfiles from here `git clone ... --recurse-submodules`
+
+You can now restart then uninstall xfce WM `yay -Rns xfwm4`
 
 ## Some services to enable
 - clean the pacman cache periodically: `sudo systemctl enable --now paccache.timer`
