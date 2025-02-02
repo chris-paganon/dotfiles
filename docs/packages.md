@@ -1,7 +1,7 @@
 acpi
-amd-ucode
 base
 base-devel
+betterdiscordctl
 blueman
 bluez
 bluez-utils
@@ -9,6 +9,7 @@ btop
 btrfs-assistant
 btrfs-progs
 cht.sh-git
+code
 cronie
 cuda
 docker
@@ -18,13 +19,14 @@ dust
 efibootmgr
 exo
 fastfetch
+firefox
 flameshot
+flatpak
 fzf
 garcon
 git
 git-delta
 gnome-keyring
-go
 grub
 grub-btrfs
 gsimplecal
@@ -63,6 +65,7 @@ numlockx
 nvidia
 nvidia-settings
 nvidia-utils
+oh-my-zsh-git
 ollama-cuda
 onlykey
 openssh
@@ -79,10 +82,8 @@ rofi
 rog-control-center
 rsync
 seahorse
-simplescreenrecorder
 snap-pac
 snap-pac-grub
-snapper
 spicetify-cli
 spotify-launcher
 sqlitebrowser
@@ -93,7 +94,6 @@ stripe-cli
 sudo
 supergfxctl
 tailscale
-texinfo
 thunar
 thunar-archive-plugin
 thunar-volman
@@ -107,14 +107,15 @@ tumbler
 unzip
 v4l2loopback-dkms
 vi
+vlc
 xarchiver
+xdg-desktop-portal-gtk
 xfce4-power-manager
 xfce4-screensaver
 xfce4-session
 xfce4-settings
 xfce4-terminal
 xfconf
-xorg-server
 xorg-xev
 xorg-xrandr
 xsel
