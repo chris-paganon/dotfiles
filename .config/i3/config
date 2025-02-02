@@ -133,7 +133,7 @@ bindsym $mod+q kill
 
 # start apps
 bindsym Mod1+space exec --no-startup-id "rofi -show drun -kb-accept-entry 'Return'"
-bindsym Mod1+Control+space exec --no-startup-id $open_next; exec --no-startup-id "rofi -show combi -modes combi -combi-modes 'run,drun' -kb-accept-entry 'Return'"
+bindsym Mod1+Control+space exec --no-startup-id $open_next; exec --no-startup-id "rofi -show drun -kb-accept-entry 'Return'"
 bindsym $mod+Mod1+space exec --no-startup-id rofi -show tmuxp -modes "tmuxp:~/.config/rofi/rofi-tmuxp.sh" -kb-accept-entry "Return"
 
 # Alt Tab like on windows. https://github.com/davatorium/rofi/issues/38 (single monitor only)
