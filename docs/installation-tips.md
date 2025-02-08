@@ -90,6 +90,9 @@ You can now restart then uninstall xfce WM `yay -Rns xfwm4`
 
 ## Some services to enable
 - clean the pacman cache periodically: `sudo systemctl enable --now paccache.timer`
+```
+sudo systemctl enable --now bluetooth
+```
 - There are probably more systemd services to enable 💁
 
 ## Not an ASUS laptop?
