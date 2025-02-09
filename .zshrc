@@ -80,7 +80,7 @@ alias hybrid="supergfxctl -m Hybrid && xfce4-session-logout --logout --fast"
 alias integrated="supergfxctl -m Integrated && xfce4-session-logout --logout --fast"
 
 # remember fixes
-alias fixlight="asusctl led-pow-2 keyboard --awake"
+alias fixlight=" asusctl aura-power keyboard --awake"
 alias grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mkinit="sudo mkinitcpio -P"
 alias reopenx="chvt 7"
