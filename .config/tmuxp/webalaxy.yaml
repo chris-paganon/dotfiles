@@ -2,34 +2,55 @@ session_name: webalaxy
 start_directory: ~/Documents/webalaxy/projects
 
 windows:
-- window_name: sc
-  layout: even-horizontal
+- window_name: modules
+  layout: main-horizontal
   focus: true
   panes:
   - shell_command:
-    - cd ./site-curve/site-curve-internal/frontend
-    - cmd: npm start
-      enter: false
-    focus: true
-  - shell_command:
-    - cd ./site-curve/site-curve-internal
-- window_name: wonderful
-  layout: even-horizontal
-  panes:
-  - shell_command:
-    - cd ./wonderful/wonderful-internal/frontend
-    - cmd: npm start
-      enter: false
-    focus: true
-  - shell_command:
-    - cd ./wonderful/wonderful-internal
-- window_name: modules
-  layout: even-horizontal
-  panes:
+    - cd ./component-library/shared-modules
   - shell_command:
     - cd ./component-library/shared-modules
     - cmd: pnpm cosmos
       enter: false
     focus: true
+- window_name: template
+  layout: main-horizontal
+  panes:
   - shell_command:
-    - cd ./component-library/shared-modules
+    - cd ./template-internal
+  - shell_command:
+    - cd ./template-internal/frontend
+    - cmd: pnpm run dev
+      enter: false
+    focus: true
+
+- window_name: wonderful
+  layout: main-horizontal
+  panes:
+  - shell_command:
+    - cd ./wonderful/wonderful-internal
+  - shell_command:
+    - cd ./wonderful/wonderful-internal/frontend
+    - cmd: npm run dev
+      enter: false
+    focus: true
+- window_name: rayna
+  layout: main-horizontal
+  panes:
+  - shell_command:
+    - cd ./rayna/rayna-internal
+  - shell_command:
+    - cd ./rayna/rayna-internal/frontend
+    - cmd: pnpm run dev
+      enter: false
+    focus: true
+- window_name: sc
+  layout: main-horizontal
+  panes:
+  - shell_command:
+    - cd ./site-curve/site-curve-internal
+  - shell_command:
+    - cd ./site-curve/site-curve-internal/frontend
+    - cmd: npm start
+      enter: false
+    focus: true
