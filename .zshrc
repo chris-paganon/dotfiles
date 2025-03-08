@@ -63,7 +63,7 @@ alias clean="yay -Sc"
 alias deepclean="yay -Sc && yay -Qtdq | yay -Rns -"
 alias installed="pacman -Qqe"
 alias yeet="yay -Rns"
-alias hmmm="yay -Sy &> /dev/null && yay -Qu"
+alias hmmm="checkupdates"
 
 # oh my zsh aliases
 alias aliasg='alias | grep'
