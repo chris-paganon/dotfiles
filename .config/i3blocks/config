@@ -1,3 +1,8 @@
+[mouse-movement]
+command=~/.config/i3blocks/mouse-movement
+full_text="🖱️"
+markup=pango
+
 # https://github.com/vivien/i3blocks-contrib/tree/master/volume-pulseaudio
 [volume-pulseaudio]
 command=~/.config/i3blocks/volume-pulseaudio

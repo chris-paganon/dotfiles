@@ -1,3 +1,22 @@
 #!/usr/bin/env bash
 
-sudo xremap xremap-mouse.yml --mouse
+PID_FILE="/tmp/xremap.pid"
+
+if [ -f "$PID_FILE" ]; then
+  # If PID file exists, kill the process
+  echo "🖱️"
+  
+  PID=$(cat "$PID_FILE")
+  if kill -0 "$PID" 2>/dev/null; then
+    sudo kill "$PID"
+    rm "$PID_FILE"
+    exit 0
+  else
+    rm "$PID_FILE"
+  fi
+fi
+
+# Start xremap and save its PID
+echo "🟢🖱️"
+sudo nohup xremap xremap-mouse.yml --mouse > /dev/null 2>&1 &
+echo $! > "$PID_FILE"
