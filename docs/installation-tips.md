@@ -92,6 +92,7 @@ You can now restart then uninstall xfce WM `yay -Rns xfwm4`
 - clean the pacman cache periodically: `sudo systemctl enable --now paccache.timer`
 ```
 sudo systemctl enable --now bluetooth
+sudo systemctl enable --now docker.socket
 ```
 - There are probably more systemd services to enable 💁
 
