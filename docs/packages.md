@@ -1,4 +1,6 @@
 acpi
+aider-chat
+alsa-utils
 base
 base-devel
 betterdiscordctl
@@ -12,6 +14,8 @@ cht.sh-git
 code
 cronie
 cuda
+cursor-bin
+discord
 docker
 docker-compose
 downgrade
@@ -21,7 +25,6 @@ exo
 fastfetch
 firefox
 flameshot
-flatpak
 fzf
 garcon
 git
@@ -65,6 +68,9 @@ numlockx
 nvidia
 nvidia-settings
 nvidia-utils
+obs-backgroundremoval
+obs-studio
+obsidian
 oh-my-zsh-git
 ollama-cuda
 onlykey
@@ -75,6 +81,7 @@ pavucontrol
 picom
 playerctl
 pulseaudio
+pulseaudio-alsa
 python-poetry
 qalculate-gtk
 ristretto
@@ -107,9 +114,9 @@ tumbler
 unzip
 v4l2loopback-dkms
 vi
+vivaldi
 vlc
 xarchiver
-xdg-desktop-portal-gtk
 xfce4-power-manager
 xfce4-screensaver
 xfce4-session
@@ -118,6 +125,7 @@ xfce4-terminal
 xfconf
 xorg-xev
 xorg-xrandr
+xremap-x11-bin
 xsel
 yay
 yay-debug
