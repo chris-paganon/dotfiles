@@ -4,6 +4,8 @@ start_directory: ~/Documents/webalaxy/projects
 windows:
 - window_name: modules
   layout: main-horizontal
+  options:
+    main-pane-height: 70%
   focus: true
   panes:
   - shell_command:
@@ -15,6 +17,8 @@ windows:
     focus: true
 - window_name: template
   layout: main-horizontal
+  options:
+    main-pane-height: 70%
   panes:
   - shell_command:
     - cd ./template-internal
@@ -26,6 +30,8 @@ windows:
 
 - window_name: wonderful
   layout: main-horizontal
+  options:
+    main-pane-height: 70%
   panes:
   - shell_command:
     - cd ./wonderful/wonderful-internal
@@ -36,6 +42,8 @@ windows:
     focus: true
 - window_name: rayna
   layout: main-horizontal
+  options:
+    main-pane-height: 70%
   panes:
   - shell_command:
     - cd ./rayna/rayna-internal
@@ -46,6 +54,8 @@ windows:
     focus: true
 - window_name: sc
   layout: main-horizontal
+  options:
+    main-pane-height: 70%
   panes:
   - shell_command:
     - cd ./site-curve/site-curve-internal
