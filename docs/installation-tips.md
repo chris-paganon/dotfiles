@@ -59,6 +59,7 @@ Defaults timestamp_timeout=30
 ```
 pacman -S xfwm4 xfce4-power-manager xfce4-screensaver xfce4-session xfce4-settings xfce4-terminal xfconf exo garcon thunar thunar-archive-plugin thunar-volman tumbler
 ```
+
 ### Setup the rest of the software and config:
 - Install `yay`: https://github.com/Jguer/yay
 - Install the full package list from `packages.md` with `yay`
@@ -69,6 +70,7 @@ pacman -S xfwm4 xfce4-power-manager xfce4-screensaver xfce4-session xfce4-settin
 #### Install flatpak software from `flatpak.md`
 #### Software with manual install
 - install vscode extensions from dotfiles `extensions.md`
+
 ##### Catppuccin:
 - spicetify need to run this 1st: 
 ```
@@ -80,11 +82,13 @@ Then follow instructions here: https://github.com/catppuccin/spicetify
 - discord, 1st run: `betterdiscordctl -i flatpak install`. Then follow instructions here: https://github.com/catppuccin/discord
 - firefox: go here, click on mocha>mauve and install: https://github.com/catppuccin/firefox
 - many websites: foolow these instructions: https://github.com/catppuccin/userstyles/blob/main/docs/USAGE.md#all-userstyles
+
 #### dotfiles
 - Setup etcfiles from my etcfiles repo
 	- Replace `/home/chris` with your home directory in `pacman.d/hooks/list-installed.hook`
 	- Add the files referenced in `lightdm-gtk-greeter.conf`
 - Setup dotfiles from here `git clone ... --recurse-submodules`
+- Build go packages in ~/scripts/go: `go build .`
 
 You can now restart then uninstall xfce WM `yay -Rns xfwm4`
 
