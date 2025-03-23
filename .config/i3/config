@@ -94,6 +94,7 @@ set $mod Mod4
 set $move_to_next ~/.config/i3/move-to-next.sh
 set $start_on_next ~/.config/i3/start-on-next.sh
 set $open_next ~/.config/i3/open-next.sh
+set $swap_windows exec --no-startup-id ~/scripts/go/i3-swap-windows/i3-swap-windows
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -138,9 +139,12 @@ bindsym $mod+Mod1+space exec --no-startup-id rofi -show tmuxp -modes "tmuxp:~/.c
 bindsym Mod1+Tab exec --no-startup-id rofi -font "SourceCodeVF 12" -show window -selected-row 1
 bindsym $mod+Escape workspace back_and_forth
 
-bindsym Mod1+c exec --no-startup-id code
-bindsym Mod1+Control+c exec --no-startup-id $start_on_next code
-bindsym $mod+c [class="Code"] focus
+# test go i3 test app
+bindsym $mod+g exec --no-startup-id /home/chris/Documents/web/learning/go/i3-tests/i3-tests
+
+bindsym Mod1+c exec --no-startup-id cursor
+bindsym Mod1+Control+c exec --no-startup-id $start_on_next cursor
+bindsym $mod+c [class="Cursor"] focus
 
 bindsym Mod1+t exec --no-startup-id xfce4-terminal
 bindsym Mod1+Control+t exec --no-startup-id xfce4-terminal -H -e "/bin/bash -c 'NO_TMUX=1 /bin/zsh'"
@@ -274,10 +278,10 @@ bindsym --whole-window $mod+Control+button9 move container to output right; work
 bindsym $mod+Control+Right move container to output right; workspace next_on_output; focus output right; exec --no-startup-id $move_to_next
 
 # Swap containers
-bindsym --whole-window $mod+Shift+button8 move container to output left; focus output left; focus left; move container to output right;
-bindsym $mod+Shift+Left move container to output left; focus output left; focus left; move container to output right;
-bindsym --whole-window $mod+Shift+button9 move container to output right; focus output right; focus right; move container to output left;
-bindsym $mod+Shift+Right move container to output right; focus output right; focus right; move container to output left;
+bindsym --whole-window $mod+Shift+button8 $swap_windows left;
+bindsym $mod+Shift+Left $swap_windows left;
+bindsym --whole-window $mod+Shift+button9 $swap_windows right;
+bindsym $mod+Shift+Right $swap_windows right;
 
 # To workspace on same screen
 # move window to next available workspace on same screen
