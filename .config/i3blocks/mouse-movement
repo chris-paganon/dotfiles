@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo xremap xremap-mouse.yml --mouse

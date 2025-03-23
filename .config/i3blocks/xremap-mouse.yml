@@ -1,0 +1,6 @@
+modmap:
+  - name: "Mouse modifier"
+    remap:
+      BTN_EXTRA:
+        held: KEY_LEFTMETA
+        alone: BTN_EXTRA
