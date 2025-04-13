@@ -8,7 +8,7 @@ if [ -f "$PID_FILE" ]; then
   
   PID=$(cat "$PID_FILE")
   if kill -0 "$PID" 2>/dev/null; then
-    sudo kill "$PID"
+    kill "$PID"
     rm "$PID_FILE"
     exit 0
   else
@@ -18,5 +18,5 @@ fi
 
 # Start xremap and save its PID
 echo "🟢🖱️"
-sudo nohup xremap xremap-mouse.yml --mouse > /dev/null 2>&1 &
+nohup xremap xremap-mouse.yml --mouse > /dev/null 2>&1 &
 echo $! > "$PID_FILE"
