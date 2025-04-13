@@ -1,20 +1,21 @@
-session_name: webalaxy
-start_directory: ~/Documents/webalaxy/projects
+session_name: plutaro
+start_directory: ~/Documents/plutaro/code
 
 windows:
-- window_name: modules
+- window_name: components
   layout: main-horizontal
   options:
     main-pane-height: 70%
   focus: true
   panes:
   - shell_command:
-    - cd ./component-library/shared-modules
+    - cd ./shared-components
   - shell_command:
-    - cd ./component-library/shared-modules
+    - cd ./shared-components
     - cmd: pnpm cosmos
       enter: false
     focus: true
+
 - window_name: template
   layout: main-horizontal
   options:
@@ -28,39 +29,41 @@ windows:
       enter: false
     focus: true
 
-- window_name: wonderful
+- window_name: iris
   layout: main-horizontal
   options:
     main-pane-height: 70%
   panes:
   - shell_command:
-    - cd ./wonderful/wonderful-internal
+    - cd ./iris-internal
   - shell_command:
-    - cd ./wonderful/wonderful-internal/frontend
-    - cmd: npm run dev
+    - cd ./iris-internal/frontend
+    - cmd: pnpm run dev
       enter: false
     focus: true
+
 - window_name: rayna
   layout: main-horizontal
   options:
     main-pane-height: 70%
   panes:
   - shell_command:
-    - cd ./rayna/rayna-internal
+    - cd ./rayna-internal
   - shell_command:
-    - cd ./rayna/rayna-internal/frontend
+    - cd ./rayna-internal/frontend
     - cmd: pnpm run dev
       enter: false
     focus: true
+
 - window_name: sc
   layout: main-horizontal
   options:
     main-pane-height: 70%
   panes:
   - shell_command:
-    - cd ./site-curve/site-curve-internal
+    - cd ./site-curve-internal
   - shell_command:
-    - cd ./site-curve/site-curve-internal/frontend
+    - cd ./site-curve-internal/frontend
     - cmd: npm start
       enter: false
     focus: true
