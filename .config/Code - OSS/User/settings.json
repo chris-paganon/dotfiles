@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "'SourceCodeVF', 'Droid Sans Mono', 'monospace', monospace, 'Noto Color Emoji'",
+  "editor.fontFamily": "'SauceCodePro Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Noto Color Emoji'",
   "terminal.external.linuxExec": "xfce4-terminal",
   "editor.fontWeight": "600",
   "git.enableSmartCommit": true,
