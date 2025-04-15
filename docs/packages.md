@@ -1,12 +1,9 @@
 acpi
-aider-chat
 alsa-utils
 base
 base-devel
 betterdiscordctl
 blueman
-bluez
-bluez-utils
 btop
 btrfs-assistant
 btrfs-progs
@@ -30,6 +27,8 @@ garcon
 git
 git-delta
 gnome-keyring
+go
+google-cloud-cli
 grub
 grub-btrfs
 gsimplecal
@@ -37,7 +36,6 @@ gvfs
 i3-wm
 i3blocks
 i3status
-imagemagick
 inotify-tools
 interception-caps2esc
 interception-tools
@@ -51,6 +49,7 @@ linux
 linux-firmware
 linux-headers
 lsd
+lsof
 man-db
 man-pages
 mullvad-vpn-bin
@@ -59,6 +58,7 @@ network-manager-applet
 networkmanager
 ngrok
 nitrogen
+nmap
 nodejs-lts-iron
 noto-fonts
 noto-fonts-emoji
@@ -82,7 +82,6 @@ picom
 playerctl
 pulseaudio
 pulseaudio-alsa
-python-poetry
 qalculate-gtk
 ristretto
 rofi
@@ -112,6 +111,7 @@ ttf-font-awesome
 ttf-sourcecodepro-nerd
 tumbler
 unzip
+uv
 v4l2loopback-dkms
 vi
 vivaldi
