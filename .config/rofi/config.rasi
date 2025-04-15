@@ -5,7 +5,7 @@
 // @theme "Adapta-Nokto"
 
 * {
-    font: "SourceCodeVF 12";
+    font: "SauceCodePro Nerd Font Bold 12";
 }
 
 window {
