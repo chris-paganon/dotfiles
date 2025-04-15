@@ -98,6 +98,7 @@ You can now restart then uninstall xfce WM `yay -Rns xfwm4`
 sudo systemctl enable --now bluetooth
 sudo systemctl enable --now docker.socket
 sudo systemctl enable --now ollama
+sudo systemctl enable --now tailscaled
 ```
 - There are probably more systemd services to enable 💁
 
