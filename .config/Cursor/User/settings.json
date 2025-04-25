@@ -56,5 +56,6 @@
     }
   ],
   "cursor.composer.shouldAllowCustomModes": true,
-  "editor.gotoLocation.multipleDefinitions": "goto"
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.minimap.enabled": true
 }
