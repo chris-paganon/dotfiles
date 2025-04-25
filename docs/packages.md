@@ -78,6 +78,7 @@ openssh
 os-prober
 pamixer
 pavucontrol
+pdf4qt
 picom
 playerctl
 pulseaudio
