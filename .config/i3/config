@@ -161,9 +161,9 @@ for_window [class="Xfce4-terminal" title="temporary"] resize set 1600 900
 for_window [class="Xfce4-terminal" title="temporary"] move left 350
 for_window [class="Xfce4-terminal" title="temporary"] move up 30
 
-bindsym Mod1+f exec --no-startup-id firefox
-bindsym Mod1+Control+f exec --no-startup-id $start_on_next firefox
-bindsym $mod+f [class="firefox"] focus
+bindsym Mod1+f exec --no-startup-id vivaldi
+bindsym Mod1+Control+f exec --no-startup-id $start_on_next vivaldi
+bindsym $mod+f [class="vivaldi"] focus
 
 bindsym Mod1+e exec --no-startup-id thunar
 bindsym Mod1+Control+e exec --no-startup-id $start_on_next thunar
