@@ -29,6 +29,7 @@ git-delta
 gnome-keyring
 go
 google-cloud-cli
+gopreload-git
 grub
 grub-btrfs
 gsimplecal
@@ -36,6 +37,7 @@ gvfs
 i3-wm
 i3blocks
 i3status
+imagemagick
 inotify-tools
 interception-caps2esc
 interception-tools
@@ -80,6 +82,7 @@ pamixer
 pavucontrol
 pdf4qt
 picom
+pinta
 playerctl
 pulseaudio
 pulseaudio-alsa
@@ -89,6 +92,7 @@ rofi
 rog-control-center
 rsync
 seahorse
+signal-desktop
 snap-pac
 snap-pac-grub
 spicetify-cli
@@ -129,7 +133,6 @@ xorg-xrandr
 xremap-x11-bin
 xsel
 yay
-yay-debug
 zip
 zoxide
 zsh
