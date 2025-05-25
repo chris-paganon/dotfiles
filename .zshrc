@@ -90,7 +90,7 @@ alias fixtime="sudo sntp -S pool.ntp.org && sudo hwclock -w"
 # scripts
 alias dev="./scripts/open-git-folder.sh"
 alias saver="asusctl profile -P Quiet && sudo systemctl stop ollama"
-alias deepsaver="saver && sudo pkill picom && sudo systemctl stop tailscaled"
+alias deepsaver="saver && sudo pkill picom && sudo systemctl stop tailscaled && sudo systemctl stop gopreload"
 
 # to remember
 alias cleanlogs="sudo journalctl --vacuum-time=2weeks"
