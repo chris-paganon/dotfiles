@@ -57,5 +57,6 @@
   ],
   "cursor.composer.shouldAllowCustomModes": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.minimap.enabled": true
+  "editor.minimap.enabled": true,
+  "cursor.chat.terminalShowHoverHint": false
 }
