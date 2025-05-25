@@ -7,6 +7,7 @@ blueman
 btop
 btrfs-assistant
 btrfs-progs
+chromium
 cht.sh-git
 code
 cronie
@@ -50,12 +51,17 @@ lightdm-gtk-greeter-settings
 linux
 linux-firmware
 linux-headers
+localsend-bin
 lsd
 lsof
 man-db
 man-pages
 mullvad-vpn-bin
 nano
+nemo
+nemo-fileroller
+nemo-preview
+nemo-seahorse
 network-manager-applet
 networkmanager
 ngrok
@@ -115,6 +121,7 @@ transmission-gtk
 ttf-font-awesome
 ttf-sourcecodepro-nerd
 tumbler
+unrar
 unzip
 uv
 v4l2loopback-dkms
