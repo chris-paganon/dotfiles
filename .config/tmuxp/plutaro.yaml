@@ -29,16 +29,16 @@ windows:
       enter: false
     focus: true
 
-- window_name: iris
+- window_name: library
   layout: main-horizontal
   options:
     main-pane-height: 70%
   panes:
   - shell_command:
-    - cd ./iris-internal
+    - cd ./component-library
   - shell_command:
-    - cd ./iris-internal/frontend
-    - cmd: pnpm run dev
+    - cd ./component-library/src/mcp
+    - cmd: pnpm build:watch
       enter: false
     focus: true
 
@@ -52,18 +52,5 @@ windows:
   - shell_command:
     - cd ./rayna-internal/frontend
     - cmd: pnpm run dev
-      enter: false
-    focus: true
-
-- window_name: sc
-  layout: main-horizontal
-  options:
-    main-pane-height: 70%
-  panes:
-  - shell_command:
-    - cd ./site-curve-internal
-  - shell_command:
-    - cd ./site-curve-internal/frontend
-    - cmd: npm start
       enter: false
     focus: true
