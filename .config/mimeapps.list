@@ -48,6 +48,8 @@ image/avif=vivaldi-stable.desktop
 image/svg+xml=vivaldi-stable.desktop
 video/ogg=vivaldi-stable.desktop
 audio/ogg=vivaldi-stable.desktop
+inode/directory=nemo.desktop
+application/x-gnome-saved-search=nemo.desktop
 
 [Added Associations]
 application/pdf=vivaldi-stable.desktop;io.github.JakubMelka.Pdf4qt.Pdf4QtPageMaster.desktop;io.github.JakubMelka.Pdf4qt.Pdf4QtEditor.desktop;org.pwmt.zathura-pdf-mupdf.desktop;xreader.desktop;mupdf.desktop;libreoffice-draw.desktop;firefox.desktop;
@@ -58,7 +60,7 @@ text/x-component=org.xfce.ristretto.desktop;
 text/x-mrml=org.xfce.ristretto.desktop;
 image/gif=org.xfce.ristretto.desktop;
 text/vnd.wap.wml=org.xfce.ristretto.desktop;
-image/png=org.xfce.ristretto.desktop;firefox.desktop;vivaldi-stable.desktop;
+image/png=pinta.desktop;org.xfce.ristretto.desktop;firefox.desktop;vivaldi-stable.desktop;
 application/appinstaller=firefox.desktop;vivaldi-stable.desktop;
 application/gml+xml=firefox.desktop;vivaldi-stable.desktop;
 application/its+xml=firefox.desktop;vivaldi-stable.desktop;
