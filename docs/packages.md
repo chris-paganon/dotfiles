@@ -35,6 +35,7 @@ grub
 grub-btrfs
 gsimplecal
 gvfs
+gvfs-mtp
 i3-wm
 i3blocks
 i3status
