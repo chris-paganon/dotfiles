@@ -17,3 +17,26 @@ Crash after pacman -Syu & /boot can’t be mounted.
 [https://bbs.archlinux.org/viewtopic.php?id=178358](https://bbs.archlinux.org/viewtopic.php?id=178358)
 
 Trying to boot into a snapshot seemed to make `mount` from live ISO mounted the wrong files. But normal boot did boot into the last corrupted state. So running anything from chroot from the mounted filesystem from live ISO was useless because it didn’t make any changes to the filesystem I actually booted into. To fix this, run steps 7 to 13 from snapper recovery page here.
+
+## Microphone
+
+### Pulseaudio
+
+Make sure mic is plugged in before starting laptop. Launch and close vivladi. Launch `alsamixer`, press F4 and turn microphone on/off.
+
+If it still doesn't work, press F6 and look for the entry with a bunch of controls, and turn mic options on/off.
+Play around with pamixer, parecord & pactl until it works.
+After doing a bunch of
+
+```
+pamixer --increase 5 --source 4
+pamixer --list-sources
+parecord -rv test.wav
+pactl list sources
+```
+
+`pamixer --list-sources` shows a source with ID 1 and another that keeps increasing after each plug/unplug. That is what actually does it.
+
+Seemed like `pamixer --increase 5 --source 1` did it.
+Or maybe I want `pactl get-default-source` to be this one: ` alsa_output.pci-0000_06_00.6.analog-stereo.monitor`
+The mic source is usually ID 1, whether it’s plugged in or not. Doing `systemctl --user restart pulseaudio` fixed it this time.
