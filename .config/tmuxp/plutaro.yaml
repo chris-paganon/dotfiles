@@ -54,3 +54,16 @@ windows:
     - cmd: pnpm run dev
       enter: false
     focus: true
+
+- window_name: merch
+  layout: main-horizontal
+  options:
+    main-pane-height: 70%
+  panes:
+  - shell_command:
+    - cd ./merchradar-internal
+  - shell_command:
+    - cd ./merchradar-internal/frontend
+    - cmd: pnpm run dev
+      enter: false
+    focus: true
