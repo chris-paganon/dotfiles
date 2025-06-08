@@ -88,6 +88,7 @@ alias reopenx="chvt 7"
 alias fixtime="sudo sntp -S pool.ntp.org && sudo hwclock -w"
 
 # scripts
+alias stt="~/scripts/local-stt/local-stt.sh"
 alias dev="./scripts/open-git-folder.sh"
 alias saver="asusctl profile -P Quiet && sudo systemctl stop ollama"
 alias deepsaver="saver && sudo pkill picom && sudo systemctl stop tailscaled && sudo systemctl stop gopreload"
