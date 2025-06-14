@@ -40,13 +40,10 @@ def record_audio(output_dir, sample_rate, channels):
 
     recording = np.concatenate(recorded_frames, axis=0)
 
-    # Generate a timestamped filename
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     audio_filename = os.path.join(output_dir, f"{timestamp}.wav")
 
-    # Save the recording as a WAV file
-    print(f"Saving recording to {audio_filename}...")
     write(audio_filename, sample_rate, recording)
-    print("Saving complete.")
+    print(f"Recording saved to {audio_filename}")
 
     return audio_filename 
