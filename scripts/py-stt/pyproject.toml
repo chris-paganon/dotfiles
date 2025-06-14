@@ -1,0 +1,7 @@
+[project]
+name = "py-stt"
+version = "0.1.0"
+description = "Simple stt with llm post-processor"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
