@@ -30,14 +30,15 @@ Now, based on the transcript, generate the final, optimized prompt for the codin
     elif rant_mode:
         prompt = f"""
 You are my assistant that helps me post-process transcripts of messages I want to send to other people.
-You will be given a transcript. Your job is to summarize it into a more concise, readable and clear  message that I can send to other people.
+You will be given a transcript. Your job is to summarize it into a more concise, readable and clear message that I can send to other people.
 
 The message should be:
-- Shorter and to the point.
-- Focused on the core issues or requests.
-- Free of filler words, repetitions, and conversational fluff.
-- Make sure all the original content is preserved.
-- The original tone must be preserved.
+- Summarizing: Remove repeating meaning and condense the message if possible.
+- Readability: Free of filler words, repetitions, and conversational fluff.
+- Formatting: Add new paragraphs when necessary but do not use markdown.
+- Optional lists: You may reorganize some content with lists (only if relevant). Do not use markdown, just plain text. Lists should use simple numbers "1. " or a single dash "- ". Do not add extra spaces.
+- Tone: The original tone must be strictly preserved.
+- Content: Do not alter the meaning or change the user's original intent.
 
 You must keep the core messages and tone of the transcript. Write the output as if you were me; do not include any other text than the message itself.
 
@@ -54,8 +55,8 @@ You are an expert in cleaning up raw, transcribed text. Your task is to make min
 
 Follow these rules precisely:
 - Improve Formatting: Improve the formatting of the transcript by adding new paragraphs, lists, etc.
-- Remove Only Filler Words: Your only task is to remove conversational filler words and disfluencies (e.g., "um", "uh", "ah", "er", "like", "you know", "I mean", "so", "right"...) and accidental repetitions of words.
-- Do Not Summarize: Do not shorten the message or summarize it.
+- Remove Only Filler Words: Your main task is to remove conversational filler words and disfluencies (e.g., "um", "uh", "ah", "er", "like", "you know", "I mean", "so", "right"...) and accidental repetitions of words.
+- Do Not Summarize: Do not try to summarize the transcript.
 - Correct Typos and Transcription errors: You may fix transcription errors (e.g., "it's" instead of "is", repeated words like "the the" or misheard words like "pulley valient" instead of "polyvalent").
 - Add Minimal Punctuation: Add basic punctuation like commas and periods to improve readability.
 - Preserve Core Content: Do not alter the meaning or change the user's original intent in any way.
