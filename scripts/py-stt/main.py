@@ -15,21 +15,6 @@ DEFAULT_MODEL_TYPE = "turbo"
 DEFAULT_LLM_MODEL = "gemma3"
 
 def main(
-    model_type: str = typer.Option(
-        DEFAULT_MODEL_TYPE,
-        "--model-type",
-        "-m",
-        help="Whisper model type (e.g., tiny, base, small, medium, large, turbo).",
-    ),
-    llm_model: str = typer.Option(
-        DEFAULT_LLM_MODEL, "--llm-model", "-l", help="LLM model for post-processing."
-    ),
-    transcript_file: str = typer.Option(
-        None,
-        "--summarize-only",
-        "-s",
-        help="Path to a transcript file to summarize.",
-    ),
     raw: bool = typer.Option(
         False,
         "--raw",
@@ -46,6 +31,21 @@ def main(
         "--rant",
         "-r",
         help="Summarize a rant into a concise message for a coworker.",
+    ),
+    transcript_file: str = typer.Option(
+        None,
+        "--transcript-file",
+        "-t",
+        help="Path to a transcript file to post-process instead of recording audio.",
+    ),
+    model_type: str = typer.Option(
+        DEFAULT_MODEL_TYPE,
+        "--model-type",
+        "-m",
+        help="Whisper model type (e.g., tiny, base, small, medium, large, turbo).",
+    ),
+    llm_model: str = typer.Option(
+        DEFAULT_LLM_MODEL, "--llm-model", "-l", help="LLM model for post-processing."
     ),
 ):
     """Main function to record, transcribe, and output."""
