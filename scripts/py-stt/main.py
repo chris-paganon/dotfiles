@@ -30,11 +30,22 @@ def main(
         "-s",
         help="Path to a transcript file to summarize.",
     ),
+    raw: bool = typer.Option(
+        False,
+        "--raw",
+        "-r",
+        help="Skip post-processing and copy the raw transcript to the clipboard.",
+    ),
 ):
     """Main function to record, transcribe, and output."""
     try:
         transcript, transcript_filename = get_transcript(model_type, transcript_file)
-        print(f"Transcript saved to {transcript_filename}")
+
+        if raw:
+            pyperclip.copy(transcript)
+            print("Raw transcript copied to clipboard.")
+            return
+
         base_filename_for_outputs = os.path.splitext(transcript_filename)[0]
 
         post_processed_transcript = llm_post_process(transcript, llm_model)
@@ -75,6 +86,7 @@ def get_transcript(model_type: str, transcript_file: str | None) -> tuple[str, s
     transcript_filename = os.path.splitext(audio_filename)[0] + ".transcript"
     with open(transcript_filename, "w") as f:
         f.write(transcript)
+    print(f"Transcript saved to {transcript_filename}")
 
     return transcript, transcript_filename
 
