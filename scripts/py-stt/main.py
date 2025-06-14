@@ -2,28 +2,41 @@ import os
 import sys
 
 import pyperclip
+import typer
 
 from recording import record_audio
 from transcription import transcribe_audio
 from llm import llm_post_process
 
-# --- Configuration ---
-MODEL_TYPE = "turbo"  # Options: tiny, base, small, medium, large, turbo
-LLM_MODEL = "gemma3"
-SAMPLE_RATE = 44100  # Sample rate
-CHANNELS = 1  # 1 for mono, 2 for stereo
-OUTPUT_DIR = "./outputs"
 
-
-def main():
+def main(
+    model_type: str = typer.Option(
+        "turbo",
+        "--model-type",
+        "-m",
+        help="Whisper model type (e.g., tiny, base, small, medium, large, turbo).",
+    ),
+    llm_model: str = typer.Option(
+        "gemma3", "--llm-model", "-l", help="LLM model for post-processing."
+    ),
+    sample_rate: int = typer.Option(
+        44100, "--sample-rate", "-r", help="Sample rate for audio recording."
+    ),
+    channels: int = typer.Option(
+        1, "--channels", "-c", help="Number of audio channels (1 for mono, 2 for stereo)."
+    ),
+    output_dir: str = typer.Option(
+        "./outputs", "--output-dir", "-o", help="Directory to save output files."
+    ),
+):
     """Main function to record, transcribe, and output."""
     try:
-        audio_filename = record_audio(OUTPUT_DIR, SAMPLE_RATE, CHANNELS)
+        audio_filename = record_audio(output_dir, sample_rate, channels)
 
         if not audio_filename:
             return
 
-        transcript = transcribe_audio(audio_filename, MODEL_TYPE)
+        transcript = transcribe_audio(audio_filename, model_type)
         print("\n--- Transcript ---")
         print(transcript)
         print("--------------------")
@@ -33,7 +46,7 @@ def main():
             f.write(transcript)
         print(f"Transcript saved to {transcript_filename}")
 
-        post_processed_transcript = llm_post_process(transcript, LLM_MODEL)
+        post_processed_transcript = llm_post_process(transcript, llm_model)
 
         print("\n--- summary ---")
         print(post_processed_transcript)
@@ -54,6 +67,5 @@ def main():
         print(f"An error occurred: {type(e).__name__}: {e}")
         sys.exit()
 
-
 if __name__ == "__main__":
-    main()
+    typer.run(main)

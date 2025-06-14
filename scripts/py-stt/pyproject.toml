@@ -10,4 +10,5 @@ dependencies = [
     "pyperclip>=1.9.0",
     "scipy>=1.15.3",
     "sounddevice>=0.5.2",
+    "typer[all]>=0.16.0",
 ]
