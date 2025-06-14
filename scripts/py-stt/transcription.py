@@ -10,4 +10,8 @@ def transcribe_audio(audio_filename, model_type):
     result = model.transcribe(audio_filename)
     transcript = result["text"]
 
+    print("\n--- Transcript ---")
+    print(transcript)
+    print("--------------------")
+
     return transcript 

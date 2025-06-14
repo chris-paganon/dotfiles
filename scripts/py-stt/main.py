@@ -8,25 +8,21 @@ from recording import record_audio
 from transcription import transcribe_audio
 from llm import llm_post_process
 
+SAMPLE_RATE = 44100
+CHANNELS = 1
+OUTPUT_DIR = "./outputs"
+DEFAULT_MODEL_TYPE = "turbo"
+DEFAULT_LLM_MODEL = "gemma3"
 
 def main(
     model_type: str = typer.Option(
-        "turbo",
+        DEFAULT_MODEL_TYPE,
         "--model-type",
         "-m",
         help="Whisper model type (e.g., tiny, base, small, medium, large, turbo).",
     ),
     llm_model: str = typer.Option(
-        "gemma3", "--llm-model", "-l", help="LLM model for post-processing."
-    ),
-    sample_rate: int = typer.Option(
-        44100, "--sample-rate", "-r", help="Sample rate for audio recording."
-    ),
-    channels: int = typer.Option(
-        1, "--channels", "-c", help="Number of audio channels (1 for mono, 2 for stereo)."
-    ),
-    output_dir: str = typer.Option(
-        "./outputs", "--output-dir", "-o", help="Directory to save output files."
+        DEFAULT_LLM_MODEL, "--llm-model", "-l", help="LLM model for post-processing."
     ),
     transcript_file: str = typer.Option(
         None,
@@ -37,33 +33,9 @@ def main(
 ):
     """Main function to record, transcribe, and output."""
     try:
-        transcript = ""
-        base_filename_for_outputs = ""
-
-        if transcript_file:
-            try:
-                with open(transcript_file, "r") as f:
-                    transcript = f.read()
-                base_filename_for_outputs = transcript_file
-            except FileNotFoundError:
-                print(f"Error: Transcript file not found at {transcript_file}")
-                sys.exit(1)
-        else:
-            audio_filename = record_audio(output_dir, sample_rate, channels)
-
-            if not audio_filename:
-                return
-
-            transcript = transcribe_audio(audio_filename, model_type)
-            print("\n--- Transcript ---")
-            print(transcript)
-            print("--------------------")
-
-            transcript_filename = os.path.splitext(audio_filename)[0] + ".transcript"
-            with open(transcript_filename, "w") as f:
-                f.write(transcript)
-            print(f"Transcript saved to {transcript_filename}")
-            base_filename_for_outputs = audio_filename
+        transcript, transcript_filename = get_transcript(model_type, transcript_file)
+        print(f"Transcript saved to {transcript_filename}")
+        base_filename_for_outputs = os.path.splitext(transcript_filename)[0]
 
         post_processed_transcript = llm_post_process(transcript, llm_model)
 
@@ -88,6 +60,28 @@ def main(
         print(f"An error occurred: {type(e).__name__}: {e}")
         sys.exit()
 
+def get_transcript(model_type: str, transcript_file: str | None) -> tuple[str, str]:
+    if transcript_file:
+        if not os.path.exists(transcript_file):
+            print(f"Error: Transcript file not found at {transcript_file}")
+            sys.exit(1)
+        
+        with open(transcript_file, "r") as f:
+            return f.read(), transcript_file
+
+    audio_filename = record_audio(OUTPUT_DIR, SAMPLE_RATE, CHANNELS)
+
+    if not audio_filename:
+        print("Error: No audio file was recorded.")
+        sys.exit(1)
+
+    transcript = transcribe_audio(audio_filename, model_type)
+
+    transcript_filename = os.path.splitext(audio_filename)[0] + ".transcript"
+    with open(transcript_filename, "w") as f:
+        f.write(transcript)
+
+    return transcript, transcript_filename
 
 if __name__ == "__main__":
     typer.run(main)
