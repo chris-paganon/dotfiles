@@ -12,19 +12,21 @@ whisper-cli -f "$output_dir/$timestamp.wav" -m /usr/share/whisper.cpp-model-larg
 echo "Audio transcribed. Summarizing text..."
 
 prompt=$(cat <<EOF
-You are my assistant that helps me post-prcess transcripts of messages I want to send to make them clearer and more concise. 
+You are my assistant that helps me post-prcess transcripts of messages I want to send to make them clearer and more readable. You should not modify the content of the transcript, only adjust it slightly and clean it up into a more readable text message format.
 
 I will provide you with a transcript and you must output the message that I will send to my coworkers.
-Your job is to clean up the transcript into a clear and concise message. You should:
-- remove any filler words, such as "um", "uh", "like", "you know", "you see", etc.
-- remove any redundant words or sentences.
-- write the output as if you were me, you must write in the 1st person, and use the word "I" instead of "the speaker", "the user", "the sender"...
-- you must keep the original tone and style of the transcript, but make it more concise and readable.
+Your job is to clean up the transcript into a clear and clean  message. You should:
+- write the output as if you were me, do not include any other text than the message
+- remove any filler words, such as "um", "uh", "like", "you know", "you see", repeating "so", etc.
+- remove any redundant words
+- you must keep the original tone and style of the transcript
 
-The transcript is:
+Here is the transcript is:
+<transript>
 $(cat $output_dir/$timestamp.transcript.txt)
+</transcript>
 
-ONLY OUTPUT THE MESSAGE, DO NOT INCLUDE ANYTHING ELSE.
+NOW ONLY OUTPUT THE CLEANED UP MESSAGE, DO NOT OUTPUT ANYTHING ELSE:
 
 EOF
 )
