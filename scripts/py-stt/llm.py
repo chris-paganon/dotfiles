@@ -18,6 +18,7 @@ The prompt should be:
 - Action-oriented, stating the desired outcome.
 - Well-structured, possibly using markdown for clarity (e.g., for code blocks, lists).
 - Free of filler words, repetitions, and conversational fluff.
+- Do not add a phrase at the start similar to "You are a helpful assistant...", "You are an expert..." or "You are a coding agent..."... Instad start directly with the task/question/request.
 
 Here is the transcript:
 <transcript>
