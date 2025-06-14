@@ -5,9 +5,11 @@ import pyperclip
 
 from recording import record_audio
 from transcription import transcribe_audio
+from llm import llm_post_process
 
 # --- Configuration ---
 MODEL_TYPE = "turbo"  # Options: tiny, base, small, medium, large, turbo
+LLM_MODEL = "gemma3"
 SAMPLE_RATE = 44100  # Sample rate
 CHANNELS = 1  # 1 for mono, 2 for stereo
 OUTPUT_DIR = "./outputs"
@@ -22,20 +24,27 @@ def main():
             return
 
         transcript = transcribe_audio(audio_filename, MODEL_TYPE)
-
-        # 3. Save and Output Transcript
         print("\n--- Transcript ---")
         print(transcript)
         print("--------------------")
 
-        # Save the transcript to a file
         transcript_filename = os.path.splitext(audio_filename)[0] + ".transcript"
         with open(transcript_filename, "w") as f:
             f.write(transcript)
         print(f"Transcript saved to {transcript_filename}")
 
-        # Copy to clipboard
-        pyperclip.copy(transcript)
+        post_processed_transcript = llm_post_process(transcript, LLM_MODEL)
+
+        print("\n--- summary ---")
+        print(post_processed_transcript)
+        print("--------------------")
+
+        summary_filename = os.path.splitext(audio_filename)[0] + ".summary.md"
+        with open(summary_filename, "w") as f:
+            f.write(post_processed_transcript)
+        print(f"Post-processed transcript saved to {summary_filename}")
+
+        pyperclip.copy(post_processed_transcript)
         print("Transcript copied to clipboard.")
 
     except KeyboardInterrupt:
