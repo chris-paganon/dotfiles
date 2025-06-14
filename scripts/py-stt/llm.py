@@ -23,4 +23,10 @@ def llm_post_process(transcript: str, model: str) -> str:
     """
 
     response = chat(model=model, messages=[{"role": "user", "content": prompt}])
-    return response.message.content
+    summary = response.message.content
+
+    print("\n--- summary ---")
+    print(summary)
+    print("--------------------")
+
+    return summary

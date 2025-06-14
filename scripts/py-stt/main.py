@@ -38,11 +38,6 @@ def main(
         base_filename_for_outputs = os.path.splitext(transcript_filename)[0]
 
         post_processed_transcript = llm_post_process(transcript, llm_model)
-
-        print("\n--- summary ---")
-        print(post_processed_transcript)
-        print("--------------------")
-
         summary_filename = (
             os.path.splitext(base_filename_for_outputs)[0] + ".summary.md"
         )
