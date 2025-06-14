@@ -36,6 +36,12 @@ def main(
         "-r",
         help="Skip post-processing and copy the raw transcript to the clipboard.",
     ),
+    prompt: bool = typer.Option(
+        False,
+        "--prompt",
+        "-p",
+        help="Optimize the transcript into a prompt for a coding agent.",
+    ),
 ):
     """Main function to record, transcribe, and output."""
     try:
@@ -48,7 +54,7 @@ def main(
 
         base_filename_for_outputs = os.path.splitext(transcript_filename)[0]
 
-        post_processed_transcript = llm_post_process(transcript, llm_model)
+        post_processed_transcript = llm_post_process(transcript, llm_model, prompt)
         summary_filename = (
             os.path.splitext(base_filename_for_outputs)[0] + ".summary.md"
         )
