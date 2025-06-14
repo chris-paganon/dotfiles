@@ -11,6 +11,7 @@
 #     "typer[all]",
 # ]
 # ///
+
 import os
 import sys
 
@@ -45,6 +46,11 @@ def main(
         "-r",
         help="Summarize a rant into a concise message for a coworker.",
     ),
+    retry: bool = typer.Option(
+        False,
+        "--retry",
+        help="Retry post-processing on the last recorded transcript.",
+    ),
     transcript_file: str = typer.Option(
         None,
         "--transcript-file",
@@ -63,7 +69,13 @@ def main(
 ):
     """Main function to record, transcribe, and output."""
     try:
-        transcript, transcript_filename = get_transcript(model_type, transcript_file)
+        if retry and transcript_file:
+            print("Error: --retry and --transcript-file cannot be used together.")
+            sys.exit(1)
+
+        transcript, transcript_filename = get_transcript(
+            model_type, transcript_file, retry
+        )
 
         if raw:
             pyperclip.copy(transcript)
@@ -92,7 +104,30 @@ def main(
         print(f"An error occurred: {type(e).__name__}: {e}")
         sys.exit()
 
-def get_transcript(model_type: str, transcript_file: str | None) -> tuple[str, str]:
+def get_transcript(
+    model_type: str, transcript_file: str | None, retry: bool = False
+) -> tuple[str, str]:
+    if retry:
+        if not os.path.isdir(OUTPUT_DIR):
+            print(f"Error: Output directory '{OUTPUT_DIR}' not found.")
+            sys.exit(1)
+
+        transcript_files = [
+            os.path.join(OUTPUT_DIR, f)
+            for f in os.listdir(OUTPUT_DIR)
+            if f.endswith(".transcript")
+        ]
+        if not transcript_files:
+            print(f"Error: No transcript files found in '{OUTPUT_DIR}' to retry.")
+            sys.exit(1)
+
+        latest_transcript_file = max(transcript_files, key=os.path.getmtime)
+        print(
+            "Retrying with latest transcript: "
+            f"{os.path.basename(latest_transcript_file)}"
+        )
+        transcript_file = latest_transcript_file
+
     if transcript_file:
         if not os.path.exists(transcript_file):
             print(f"Error: Transcript file not found at {transcript_file}")
