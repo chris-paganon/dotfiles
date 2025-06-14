@@ -24,7 +24,7 @@ from llm import llm_post_process
 
 SAMPLE_RATE = 44100
 CHANNELS = 1
-OUTPUT_DIR = "./outputs"
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "outputs")
 DEFAULT_MODEL_TYPE = "turbo"
 DEFAULT_LLM_MODEL = "gemma3"
 
