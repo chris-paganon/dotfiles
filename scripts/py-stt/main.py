@@ -33,7 +33,6 @@ def main(
     raw: bool = typer.Option(
         False,
         "--raw",
-        "-r",
         help="Skip post-processing and copy the raw transcript to the clipboard.",
     ),
     prompt: bool = typer.Option(
@@ -41,6 +40,12 @@ def main(
         "--prompt",
         "-p",
         help="Optimize the transcript into a prompt for a coding agent.",
+    ),
+    rant: bool = typer.Option(
+        False,
+        "--rant",
+        "-r",
+        help="Summarize a rant into a concise message for a coworker.",
     ),
 ):
     """Main function to record, transcribe, and output."""
@@ -54,7 +59,9 @@ def main(
 
         base_filename_for_outputs = os.path.splitext(transcript_filename)[0]
 
-        post_processed_transcript = llm_post_process(transcript, llm_model, prompt)
+        post_processed_transcript = llm_post_process(
+            transcript, llm_model, prompt, rant
+        )
         summary_filename = (
             os.path.splitext(base_filename_for_outputs)[0] + ".summary.md"
         )
@@ -63,7 +70,7 @@ def main(
         print(f"Post-processed transcript saved to {summary_filename}")
 
         pyperclip.copy(post_processed_transcript)
-        print("Summary copied to clipboard.")
+        print("Post-processed transcript copied to clipboard.")
 
     except KeyboardInterrupt:
         print("\nRecording interrupted by user.")
