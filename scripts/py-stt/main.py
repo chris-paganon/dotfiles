@@ -101,6 +101,8 @@ def get_transcript(model_type: str, transcript_file: str | None) -> tuple[str, s
         f.write(transcript)
     print(f"Transcript saved to {transcript_filename}")
 
+    os.remove(audio_filename)
+
     return transcript, transcript_filename
 
 if __name__ == "__main__":
