@@ -29,14 +29,15 @@ Now, based on the transcript, generate the final, optimized prompt for the codin
 """
     elif rant_mode:
         prompt = f"""
-You are my assistant that helps me post-process transcripts of messages I want to send to my coworkers.
-You will be given a transcript. Your job is to summarize it into a more concise, readable and clear  message that I can send to my coworkers.
+You are my assistant that helps me post-process transcripts of messages I want to send to other people.
+You will be given a transcript. Your job is to summarize it into a more concise, readable and clear  message that I can send to other people.
 
 The message should be:
 - Shorter and to the point.
-- Stripped of overly-casual language.
 - Focused on the core issues or requests.
 - Free of filler words, repetitions, and conversational fluff.
+- Make sure all the original content is preserved.
+- The original tone must be preserved.
 
 You must keep the core messages and tone of the transcript. Write the output as if you were me; do not include any other text than the message itself.
 
@@ -45,25 +46,29 @@ Here is the transcript of the rant:
 {transcript}
 </transcript>
 
-NOW ONLY OUTPUT THE CLEANED UP AND SUMMARIZED MESSAGE, DO NOT OUTPUT ANYTHING ELSE
+Now only output the cleaned up and summarized message, do not output anything else
 """
     else:
         prompt = f"""
-You are my assistant that helps me post-process transcripts of messages I want to send to make them clearer and more readable. You should not modify the content of the transcript, only adjust it slightly and clean it up into a more readable text message format.
+You are an expert in cleaning up raw, transcribed text. Your task is to make minimal content edits to a transcript to improve its readability while strictly preserving the original content, tone, and style.
 
-I will provide you with a transcript and you must output the message that I will send to my coworkers.
-Your job is to clean up the transcript into a clear and clean  message. You should:
-- write the output as if you were me, do not include any other text than the message
-- remove any filler words, such as "um", "uh", "like", "you know", "you see", repeating "so", etc.
-- remove any redundant words
-- you must keep the original tone and style of the transcript
+Follow these rules precisely:
+- Improve Formatting: Improve the formatting of the transcript by adding new paragraphs, lists, etc.
+- Remove Only Filler Words: Your only task is to remove conversational filler words and disfluencies (e.g., "um", "uh", "ah", "er", "like", "you know", "I mean", "so", "right"...) and accidental repetitions of words.
+- Do Not Summarize: Do not shorten the message or summarize it.
+- Correct Typos and Transcription errors: You may fix transcription errors (e.g., "it's" instead of "is", repeated words like "the the" or misheard words like "pulley valient" instead of "polyvalent").
+- Add Minimal Punctuation: Add basic punctuation like commas and periods to improve readability.
+- Preserve Core Content: Do not alter the meaning or change the user's original intent in any way.
+- Maintain Original Tone: The speaker's tone (e.g., casual, formal, humorous) must be kept as it is in the transcript.
 
-Here is the transcript is:
-<transript>
+You will be given a raw transcript. You must output ONLY the cleaned-up text, with no introductory phrases, explanations, or markdown formatting. Write the output as if you were me.
+
+Here is the transcript:
+<transcript>
 {transcript}
-</transript>
+</transcript>
 
-NOW ONLY OUTPUT THE CLEANED UP MESSAGE, DO NOT OUTPUT ANYTHING ELSE
+Now, output only the cleaned-up version of the transcript. Do not output anything else.
 """
 
     response = chat(model=model, messages=[{"role": "user", "content": prompt}])
