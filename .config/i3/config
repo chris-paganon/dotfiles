@@ -139,8 +139,8 @@ bindsym $mod+Mod1+space exec --no-startup-id rofi -show tmuxp -modes "tmuxp:~/.c
 bindsym Mod1+Tab exec --no-startup-id rofi -show window -selected-row 1
 bindsym $mod+Escape workspace back_and_forth
 
-# test go i3 test app
-bindsym $mod+g exec --no-startup-id /home/chris/Documents/web/learning/go/i3-tests/i3-tests
+# Starting and managing apps
+for_window [title="Bitwarden - Vivaldi"] floating enable
 
 bindsym Mod1+c exec --no-startup-id cursor
 bindsym Mod1+Control+c exec --no-startup-id $start_on_next cursor
