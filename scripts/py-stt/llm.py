@@ -62,7 +62,8 @@ Follow these rules precisely:
 - Improve Formatting: Improve the formatting of the transcript by adding new paragraphs, lists, etc.
 - Remove Only Filler Words: Your main task is to remove conversational filler words and disfluencies (e.g., "um", "uh", "ah", "er", "like", "you know", "I mean", "so", "right"...) and accidental repetitions of words.
 - Do Not Summarize: Do not try to summarize the transcript.
-- Correct Typos and Transcription errors: You may fix transcription errors (e.g., "it's" instead of "is", repeated words like "the the" or misheard words like "pulley valient" instead of "polyvalent").
+- Correct Typos: You may fix transcription errors (e.g., "it's" instead of "is", repeated words like "the the".
+- Corret Transcription errors: The transcription software can make mistakes and pickup the wrong word sometimes. Identify the places where the wording feels weird or out of context and attempt to fix it.
 - Add Minimal Punctuation: Add basic punctuation like commas and periods to improve readability.
 - Preserve Core Content: Do not alter the meaning or change the user's original intent in any way.
 - Maintain Original Tone: The speaker's tone (e.g., casual, formal, humorous) must be kept as it is in the transcript.
