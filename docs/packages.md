@@ -75,6 +75,7 @@ npm
 ntp
 numlockx
 nvidia
+nvidia-prime
 nvidia-settings
 nvidia-utils
 obs-backgroundremoval
@@ -97,6 +98,7 @@ qalculate-gtk
 ristretto
 rofi
 rog-control-center
+rpi-imager
 rsync
 seahorse
 signal-desktop
@@ -107,6 +109,7 @@ spotify-launcher
 sqlitebrowser
 sshfs
 starship
+steam
 stow
 stripe-cli
 sudo
@@ -129,6 +132,7 @@ v4l2loopback-dkms
 vi
 vivaldi
 vlc
+wmctrl
 xarchiver
 xfce4-power-manager
 xfce4-screensaver
