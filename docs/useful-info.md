@@ -26,3 +26,6 @@ https://flameshot.org/docs/guide/imgur-help/
 
 ## Downgrade everything
 https://wiki.archlinux.org/title/Arch_Linux_Archive#How_to_restore_all_packages_to_a_specific_date
+
+## X11 forwarding
+https://wiki.archlinux.org/title/OpenSSH#X11_forwarding
