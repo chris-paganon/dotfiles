@@ -5,7 +5,7 @@ windows:
 - window_name: components
   layout: main-horizontal
   options:
-    main-pane-height: 70%
+    main-pane-height: 80%
   focus: true
   panes:
   - shell_command:
@@ -19,7 +19,7 @@ windows:
 - window_name: template
   layout: main-horizontal
   options:
-    main-pane-height: 70%
+    main-pane-height: 80%
   panes:
   - shell_command:
     - cd ./template-internal
@@ -32,7 +32,7 @@ windows:
 - window_name: library
   layout: main-horizontal
   options:
-    main-pane-height: 70%
+    main-pane-height: 80%
   panes:
   - shell_command:
     - cd ./component-library
@@ -42,28 +42,15 @@ windows:
       enter: false
     focus: true
 
-- window_name: rayna
+- window_name: hub
   layout: main-horizontal
   options:
-    main-pane-height: 70%
+    main-pane-height: 80%
   panes:
   - shell_command:
-    - cd ./rayna-internal
+    - cd ./plutaro-hub
   - shell_command:
-    - cd ./rayna-internal/frontend
-    - cmd: pnpm run dev
-      enter: false
-    focus: true
-
-- window_name: merch
-  layout: main-horizontal
-  options:
-    main-pane-height: 70%
-  panes:
-  - shell_command:
-    - cd ./merchradar-internal
-  - shell_command:
-    - cd ./merchradar-internal/frontend
+    - cd ./plutaro-hub/frontend
     - cmd: pnpm run dev
       enter: false
     focus: true
