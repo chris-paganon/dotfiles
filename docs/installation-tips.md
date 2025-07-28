@@ -99,6 +99,7 @@ sudo systemctl enable --now bluetooth
 sudo systemctl enable --now docker.socket
 sudo systemctl enable --now ollama
 sudo systemctl enable --now tailscaled
+sudo systemctl enable --now snapper-cleanup.timer
 ```
 - There are probably more systemd services to enable 💁
 
