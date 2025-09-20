@@ -146,8 +146,8 @@ bindsym Mod1+c exec --no-startup-id cursor
 bindsym Mod1+Control+c exec --no-startup-id $start_on_next cursor
 bindsym $mod+c [class="Cursor"] focus
 
-bindsym Mod1+t exec --no-startup-id xfce4-terminal
-bindsym Mod1+Control+t exec --no-startup-id xfce4-terminal -H -e "/bin/bash -c 'NO_TMUX=1 /bin/zsh'"
+bindsym Mod1+t exec --no-startup-id xfce4-terminal -H -e "/bin/bash -c 'WITH_TMUX=1 /bin/zsh'"
+bindsym Mod1+Control+t exec --no-startup-id xfce4-terminal
 bindsym Mod1+a exec --no-startup-id xfce4-terminal
 bindsym $mod+a [con_mark="terminal"] scratchpad show
 for_window [class="Xfce4-terminal" title="Terminal"] mark "terminal"
@@ -163,7 +163,7 @@ for_window [class="Xfce4-terminal" title="temporary"] move up 30
 
 bindsym Mod1+f exec --no-startup-id vivaldi
 bindsym Mod1+Control+f exec --no-startup-id $start_on_next vivaldi
-bindsym $mod+f [class="vivaldi"] focus
+bindsym $mod+f [class="Vivaldi-stable"] focus
 
 bindsym Mod1+e exec --no-startup-id nemo
 bindsym Mod1+Control+e exec --no-startup-id $start_on_next nemo
@@ -183,6 +183,10 @@ bindsym Mod1+q exec --no-startup-id qalculate-gtk
 for_window [class="Qalculate-gtk"] floating enable
 
 bindsym Mod1+x exec --no-startup-id flameshot gui
+
+bindsym Mod1+d exec --no-startup-id discord
+bindsym Mod1+Control+d exec --no-startup-id $start_on_next discord
+bindsym $mod+d [class="discord"] focus
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
