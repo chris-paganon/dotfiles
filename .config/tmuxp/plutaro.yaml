@@ -35,9 +35,9 @@ windows:
     main-pane-height: 80%
   panes:
   - shell_command:
-    - cd ./component-library
+    - cd ./component-library-main
   - shell_command:
-    - cd ./component-library/src/mcp
+    - cd ./component-library-main/src/mcp
     - cmd: pnpm build:watch
       enter: false
     focus: true
