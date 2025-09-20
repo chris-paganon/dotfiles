@@ -1,3 +1,6 @@
+## How to go back to desktop from tty
+`chvt 7`
+
 ## How to start ssh agent (if not enabled by default)
 ```
 eval $(ssh-agent)
