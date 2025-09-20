@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Set NO_TMUX variable to disable tmux auto-start
-if [[ -n "${NO_TMUX}" ]] {
+# Set WITH_TMUX variable to enable tmux auto-start
+if [[ -z "${WITH_TMUX}" ]] {
   return
 }
 
