@@ -79,6 +79,7 @@ alias dockerstop="docker stop \$(docker ps -q)"
 alias dockerstart="docker start \$(docker ps -qa)"
 alias hybrid="supergfxctl -m Hybrid && xfce4-session-logout --logout --fast"
 alias integrated="supergfxctl -m Integrated && xfce4-session-logout --logout --fast"
+alias be="~/.config/tmux/plutaro-full-stack.sh"
 
 # remember fixes
 alias fixlight=" asusctl aura-power keyboard --awake"
