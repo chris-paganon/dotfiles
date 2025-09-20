@@ -8,8 +8,10 @@ blueman
 btop
 btrfs-assistant
 btrfs-progs
+calibre
 chromium
 code
+converseen
 cronie
 cuda
 cursor-bin
@@ -23,11 +25,12 @@ efibootmgr
 exo
 fastfetch
 firefox
-flameshot
+flameshot-imgur
 fzf
 garcon
 git
 git-delta
+github-cli
 gnome-keyring
 go
 google-cloud-cli
@@ -59,7 +62,6 @@ lsof
 man-db
 man-pages
 mullvad-vpn-bin
-mullvad-vpn-bin-debug
 nano
 nemo
 nemo-fileroller
@@ -107,7 +109,6 @@ signal-desktop
 snap-pac
 snap-pac-grub
 spicetify-cli
-spicetify-cli-debug
 spotify-launcher
 sqlitebrowser
 sshfs
@@ -134,6 +135,7 @@ v4l2loopback-dkms
 vi
 vivaldi
 vlc
+vlc-plugins-all
 wmctrl
 woff2-font-awesome
 xarchiver
