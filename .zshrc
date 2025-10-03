@@ -34,7 +34,7 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # delete word with ctrl+backspace
-bindkey '^H' backward-delete-word
+bindkey '^?' backward-delete-word
 
 # only used for zsh-autosuggest word completion: use next word suggestion with alt+right
 bindkey '^[[1;3C' vi-forward-word
