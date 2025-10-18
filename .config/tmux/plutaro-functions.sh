@@ -13,7 +13,7 @@ tmux split-window -v -l 16 -c "$current_dir/functions/typescript"
 tmux send-keys C-z "pnpm run build:watch" Enter
 
 tmux split-window -v -l 8 -c "$current_dir/frontend"
-tmux send-keys C-z "VITE_USE_LOCAL=true pnpm run dev" Enter
+tmux send-keys C-z "VITE_USE_LOCAL_FUNCTIONS=true pnpm run dev" Enter
 
 tmux select-pane -t 0
-firebase emulators:start --import ./emulator-data --export-on-exit ./emulator-data
+firebase emulators:start --only functions
