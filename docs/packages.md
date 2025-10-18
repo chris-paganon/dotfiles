@@ -1,5 +1,6 @@
 acpi
 alsa-utils
+apache-tools
 base
 base-devel
 betterdiscordctl
@@ -59,6 +60,7 @@ linux
 linux-firmware
 linux-headers
 localsend-bin
+lostfiles
 lsd
 lsof
 man-db
