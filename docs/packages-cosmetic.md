@@ -1,0 +1,2 @@
+betterdiscordctl
+spicetify-cli

@@ -1,0 +1,13 @@
+btrfs-assistant
+btrfs-progs
+cuda
+gopreload-git
+grub-btrfs
+nvidia
+nvidia-prime
+nvidia-settings
+nvidia-utils
+ollama-cuda
+rog-control-center
+snap-pac
+snap-pac-grub
