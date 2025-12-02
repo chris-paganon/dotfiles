@@ -2,20 +2,6 @@ session_name: pp
 start_directory: ~/Documents/plutaro/code
 
 windows:
-- window_name: components
-  layout: main-horizontal
-  options:
-    main-pane-height: 80%
-  focus: true
-  panes:
-  - shell_command:
-    - cd ./shared-components
-  - shell_command:
-    - cd ./shared-components
-    - cmd: pnpm cosmos
-      enter: false
-    focus: true
-
 - window_name: template
   layout: main-horizontal
   options:
@@ -43,6 +29,7 @@ windows:
     focus: true
 
 - window_name: hub
+  focus: true
   layout: main-horizontal
   options:
     main-pane-height: 80%
