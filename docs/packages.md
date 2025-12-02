@@ -27,6 +27,7 @@ dust
 efibootmgr
 exo
 fastfetch
+fd
 firefox
 flameshot-imgur
 fzf
@@ -65,6 +66,7 @@ lsd
 lsof
 man-db
 man-pages
+micro
 mullvad-vpn-bin
 nano
 nemo
@@ -109,6 +111,7 @@ rofi
 rog-control-center
 rpi-imager
 rsync
+sd
 seahorse
 signal-desktop
 snap-pac
